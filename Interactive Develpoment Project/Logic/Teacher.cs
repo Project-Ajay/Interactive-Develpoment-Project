@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Interactive_Develpoment_Project.BusinessLogic
+namespace Interactive_Develpoment_Project.Logic
 {
 	public class Teacher
 	{
