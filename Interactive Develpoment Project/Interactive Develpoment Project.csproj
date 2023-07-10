@@ -57,8 +57,10 @@
 
 	<ItemGroup>
 	  <None Remove="BusinessLogic\" />
+	  <None Remove="UserInterface\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="BusinessLogic\" />
+	  <Folder Include="UserInterface\" />
 	</ItemGroup>
 </Project>
