@@ -20,7 +20,7 @@ namespace Interactive_Develpoment_Project.Logic
 			set 
 			{
 				// if the value is empty an error will be thrown
-				if (string.IsNullOrEmpty(value))
+				if (string.IsNullOrEmpty(value) || value.Any(char.IsDigit))
 					throw new Exception("INPUT CAN'T BE EMPTY");
 				_studentName = value;
 			}
@@ -57,6 +57,22 @@ namespace Interactive_Develpoment_Project.Logic
 					throw new Exception("Invalid Input");
 				_studentPhoneNumber = value;
 			}
+		}
+
+		//Student Date of Birth Property
+
+		public DateOnly DateOfBirth
+		{
+			get
+			{
+				return _dateOfBirth;
+			}
+			set
+			{
+                if (value >= DateOnly.FromDateTime(DateTime.Today))
+                    throw new Exception("Invalid Input.");
+                _dateOfBirth = value;
+            }
 		}
 
     }
