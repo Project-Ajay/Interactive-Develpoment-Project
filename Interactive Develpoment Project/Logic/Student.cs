@@ -35,9 +35,27 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 			set 
 			{
+				// if value doesn'y contain "@" or "." an error thrown
 				if (!value.Contains("@") || (!value.Contains(".")))
 					throw new Exception("Invalid Email");
 				_studentEmail = value;
+			}
+		}
+
+		//StudentPhoneNumber Property
+
+		public string StudentPhoneNumber
+		{
+			get
+			{
+				return _studentPhoneNumber;
+			}
+			set
+			{
+				// string is empty or if it contains the string contins a letter an expection will be thrown 
+                if (string.IsNullOrEmpty(value) || value.Any(char.IsLetter))
+					throw new Exception("Invalid Input");
+				_studentPhoneNumber = value;
 			}
 		}
 
