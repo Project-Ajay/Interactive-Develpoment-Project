@@ -27,6 +27,19 @@ namespace Interactive_Develpoment_Project.Logic
 		}
 
 		//StudentEmail Property 
+		public string StudentEmail
+		{
+			get 
+			{
+				return _studentEmail;
+			}
+			set 
+			{
+				if (!value.Contains("@") || (!value.Contains(".")))
+					throw new Exception("Invalid Email");
+				_studentEmail = value;
+			}
+		}
 
     }
 }
