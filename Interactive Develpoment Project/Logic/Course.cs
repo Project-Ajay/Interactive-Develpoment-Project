@@ -1,10 +1,9 @@
 ﻿using System;
 namespace Interactive_Develpoment_Project.Logic
 {
-	public class Teacher
+	public class Course
 	{
-		
-		public Teacher()
+		public Course()
 		{
 		}
 	}
