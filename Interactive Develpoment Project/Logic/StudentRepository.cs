@@ -12,10 +12,12 @@ namespace Interactive_Develpoment_Project.Logic
 
         public static void AddStudent(Student student)
         {
-            //foreach (Student user in students)
-            //{
-            //    if()
-            //}
+            foreach (Student user in students)
+            {
+                if (user.StudentName == student.StudentName && user.StudentPhoneNumber == student.StudentPhoneNumber
+                    && user.StudentEmail == student.StudentEmail)
+                    throw new Exception("Student Already Exist");
+            }
 
             students.Add(student);
         }
