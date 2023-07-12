@@ -8,6 +8,9 @@ namespace Interactive_Develpoment_Project.Logic
 		private int _studentId;
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
+		private bool _isDomesticStudent = true;
+
+		private int _count = 0999;
 
 
 		//StudentName property
@@ -61,7 +64,7 @@ namespace Interactive_Develpoment_Project.Logic
 
 		//Student Date of Birth Property
 
-		public DateOnly DateOfBirth
+		public DateOnly DateOfBirth 
 		{
 			get
 			{
@@ -75,6 +78,30 @@ namespace Interactive_Develpoment_Project.Logic
             }
 		}
 
+		// Student ID Property
+
+		public int StudentId
+		{
+			get
+			{
+				return _studentId;
+			}
+		}
+
+		//Constructor 
+		public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,bool studentType)
+		{
+			_count++;
+			_studentId = _count;
+
+			_studentName = StudentName;
+			_studentEmail = StudentEmail;
+			_dateOfBirth = DateOfBirth;
+			_studentPhoneNumber = StudentPhoneNumber;
+			_isDomesticStudent = studentType;
+
+
+		}
     }
 }
 
