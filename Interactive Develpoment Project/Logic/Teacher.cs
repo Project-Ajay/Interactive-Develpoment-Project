@@ -23,7 +23,17 @@ namespace Interactive_Develpoment_Project.Logic
 		private List<Schedule> _teacherSchedule = new List<Schedule>();
 
 
+		public string FirstName
+		{
+			get { return _teacherFirstName; }
+			set { _teacherFirstName = value; }
+		}
 
+		public string LastName
+        {
+            get { return _teacherLastName; }
+            set { _teacherLastName = value; }
+        }
 
         // Constructor
         public Teacher()
