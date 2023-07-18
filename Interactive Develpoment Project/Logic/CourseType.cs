@@ -6,9 +6,10 @@ namespace Interactive_Develpoment_Project.Logic
 	//for example 3 public course, 5 professional course, 2 elective course
 	public enum CourseType
 	{
-		Public,
+		
 		Professional,
-		Elective
+		Elective,
+		Mandatory
 	}
 }
 
