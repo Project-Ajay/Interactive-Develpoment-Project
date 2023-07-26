@@ -61,6 +61,13 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="BusinessLogic\" />
-	  <Folder Include="UserInterface\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="UserInterface\StudentInfoUi.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UserInterface\StudentLoginUi.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

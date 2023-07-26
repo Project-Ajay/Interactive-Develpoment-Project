@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Interactive_Develpoment_Project.UserInterface.StudentLoginUi"
+             Title="StudentLoginUi">
+    
+    <VerticalStackLayout>
+
+        <Label
+            HorizontalOptions="Center"
+            Text="Student Login" FontSize="32" FontAttributes="Bold"
+            Margin="20"/>
+
+        <Entry
+            Placeholder="Enter Student ID"
+            WidthRequest="600"
+            Margin="20"/>
+
+        <Entry
+            Placeholder="Enter Password"
+            WidthRequest="600"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Padding="50">
+            <Button
+                x:Name="StudentLoginButton" Clicked="StudentLoginButton_Clicked"
+                Text="Login" TextColor="Green" FontSize="19"
+                WidthRequest="150"
+                />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
