@@ -9,6 +9,7 @@ namespace Interactive_Develpoment_Project.Logic
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
 		private bool _isDomesticStudent = true;
+		private string _password;
 
 		private int _count = 0999;
 
@@ -88,8 +89,40 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		//Constructor 
-		public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,bool studentType)
+		//Student Password
+
+		public string Password
+		{
+			get
+			{
+				return _password;			
+			}
+			set 
+			{
+				if (value.Length < 8 || !ContainsUppercase(value) || !ContainsNumber(value))
+				{
+					throw new Exception("Invalid password. It must be at least 8 characters long and contain at least one uppercase letter and one digit.");
+				}
+				_password = value;
+			}
+		}
+
+
+		//Passwaord Validation
+
+		private bool ContainsUppercase(string password)
+		{
+			return password.Any(char.IsUpper);
+		}
+
+        private bool ContainsNumber(string password)
+        {
+            return password.Any(char.IsDigit);
+        }
+
+
+        //Constructor 
+        public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,bool studentType)
 		{
 			_count++;
 			_studentId = _count;
