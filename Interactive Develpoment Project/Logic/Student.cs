@@ -122,7 +122,7 @@ namespace Interactive_Develpoment_Project.Logic
 
 
         //Constructor 
-        public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,bool studentType)
+        public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,string password,bool studentType)
 		{
 			_count++;
 			_studentId = _count;
@@ -131,6 +131,7 @@ namespace Interactive_Develpoment_Project.Logic
 			_studentEmail = StudentEmail;
 			_dateOfBirth = DateOfBirth;
 			_studentPhoneNumber = StudentPhoneNumber;
+			_password = password;
 			_isDomesticStudent = studentType;
 
 
