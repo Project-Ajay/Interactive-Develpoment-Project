@@ -12,11 +12,13 @@
             Margin="20"/>
 
         <Entry
+            x:Name="StudentIDEntry"
             Placeholder="Enter Student ID"
             WidthRequest="600"
             Margin="20"/>
 
         <Entry
+            x:Name="StudentPasswordEntry"
             Placeholder="Enter Password"
             WidthRequest="600"/>
 
