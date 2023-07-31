@@ -1,4 +1,4 @@
-namespace Interactive_Develpoment_Project.UserInterface;
+namespace Interactive_Develpoment_Project.Pages;
 using Logic;
 
 public partial class StudentLoginUi : ContentPage

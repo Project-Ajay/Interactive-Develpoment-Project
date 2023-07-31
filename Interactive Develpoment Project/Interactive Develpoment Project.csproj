@@ -50,6 +50,14 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+	<ItemGroup>
+	  <AndroidResource Remove="BusinessLogic\**" />
+	  <Compile Remove="BusinessLogic\**" />
+	  <EmbeddedResource Remove="BusinessLogic\**" />
+	  <MauiCss Remove="BusinessLogic\**" />
+	  <MauiXaml Remove="BusinessLogic\**" />
+	  <None Remove="BusinessLogic\**" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
@@ -60,13 +68,13 @@
 	  <None Remove="UserInterface\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="BusinessLogic\" />
-	</ItemGroup>
-	<ItemGroup>
-	  <MauiXaml Update="UserInterface\StudentInfoUi.xaml">
+	  <MauiXaml Update="Pages\LandingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="UserInterface\StudentLoginUi.xaml">
+	  <MauiXaml Update="Pages\StudentInfoUi.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\StudentLoginUi.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
