@@ -27,14 +27,14 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		private DateOnly _date;
+		private DateOnly _dateCreated;
 
-		public DateOnly Date
+		public DateOnly DateCreated
 		{
-			get { return _date; }
+			get { return _dateCreated; }
 			set
 			{
-				_date = value;
+				_dateCreated = value;
 			}
 		}
 
@@ -75,15 +75,24 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Assessment(string title,string decription,DateOnly date, double grade,TimeSpan startTime,TimeSpan endTime)
+		public Assessment(string title,string decription,DateOnly dateCreated, double grade,TimeSpan startTime,TimeSpan endTime)
 		{
 			Title = title;
 			Description = decription;
-			Date = date;
+			DateCreated = dateCreated;
 			Grade = grade;
 			StartTime = startTime;
 			EndTime = endTime;
 		}
-	}
+
+        public Assessment(string title, string decription, DateOnly dateCreated, double grade)
+        {
+            Title = title;
+            Description = decription;
+            DateCreated = dateCreated;
+            Grade = grade;
+           
+        }
+    }
 }
 
