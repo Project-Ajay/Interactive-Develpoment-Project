@@ -27,14 +27,14 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		private DateOnly _date;
+		private DateOnly _dateCreated;
 
-		public DateOnly Date
+		public DateOnly DateCreated
 		{
-			get { return _date; }
+			get { return _dateCreated; }
 			set
 			{
-				_date = value;
+				_dateCreated = value;
 			}
 		}
 
@@ -51,13 +51,48 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Assessment(string title,string decription,DateOnly date, double grade)
+		private TimeSpan _startTime;
+
+		public TimeSpan StartTime
+		{
+			get { return _startTime; }
+			set
+			{
+				_startTime = value;
+			}
+		}
+
+		private TimeSpan _endTime;
+
+		public TimeSpan EndTime
+		{
+			get { return _endTime; }
+			set
+			{
+				if (_endTime < _startTime)
+					throw new Exception("End Time must be after the start time.");
+				_endTime = value;
+			}
+		}
+
+		public Assessment(string title,string decription,DateOnly dateCreated, double grade,TimeSpan startTime,TimeSpan endTime)
 		{
 			Title = title;
 			Description = decription;
-			Date = date;
+			DateCreated = dateCreated;
 			Grade = grade;
+			StartTime = startTime;
+			EndTime = endTime;
 		}
-	}
+
+        public Assessment(string title, string decription, DateOnly dateCreated, double grade)
+        {
+            Title = title;
+            Description = decription;
+            DateCreated = dateCreated;
+            Grade = grade;
+           
+        }
+    }
 }
 

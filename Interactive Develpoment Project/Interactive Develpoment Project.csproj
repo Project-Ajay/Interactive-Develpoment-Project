@@ -57,6 +57,7 @@
 	  <MauiCss Remove="BusinessLogic\**" />
 	  <MauiXaml Remove="BusinessLogic\**" />
 	  <None Remove="BusinessLogic\**" />
+	  <None Remove="DataAccess\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -77,5 +78,8 @@
 	  <MauiXaml Update="Pages\StudentLoginUi.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="DataAccess\" />
 	</ItemGroup>
 </Project>
