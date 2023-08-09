@@ -16,8 +16,10 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Assignment(string title, string decription, DateOnly dateCreated, double grade,DateOnly dueDate)
-			:base(title,decription,dateCreated,grade)
+		
+
+		public Assignment(string title, string decription, DateOnly dateCreated,double percentageOfCourse ,DateOnly dueDate)
+			:base(title,decription,dateCreated,percentageOfCourse)
 		{
 			DueDate = dueDate;
 		}

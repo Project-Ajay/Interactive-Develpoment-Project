@@ -1,12 +1,12 @@
 ﻿using System;
 namespace Interactive_Develpoment_Project.Logic
 {
-	public static class CourseRepository
+	public  class CourseRepository
 	{
 
-		private static List<Course> _courseList = new List<Course>();
+		private List<Course> _courseList = new List<Course>();
 
-		public static void AddCourse(Course course)
+		public void AddCourse(Course course)
 		{
 			foreach(Course course1 in _courseList)
 			{
@@ -16,7 +16,7 @@ namespace Interactive_Develpoment_Project.Logic
 			_courseList.Add(course);
 		}
 
-		public static Course GetCourseById(int id)
+		public Course GetCourseById(int id)
 		{
 			foreach(Course course in _courseList)
 			{
@@ -26,7 +26,7 @@ namespace Interactive_Develpoment_Project.Logic
 			return null;
 		}
 
-		public static List<Course> GetCourseByType(CourseType courseType)
+		public  List<Course> GetCourseByType(CourseType courseType)
 		{
 			List<Course> result = new List<Course>();
 			foreach(Course course in _courseList)
@@ -40,7 +40,7 @@ namespace Interactive_Develpoment_Project.Logic
 		}
 
 		//read only property to read all course in list
-		public static List<Course> Courses => _courseList;
+		public  List<Course> Courses => _courseList;
 	}
 }
 

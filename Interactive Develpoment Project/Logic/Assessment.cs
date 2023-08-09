@@ -38,18 +38,7 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		private double _grade;
-
-		public double Grade
-		{
-			get { return _grade; }
-			set
-			{
-				if (value <= 0)
-					throw new Exception(" The grade can not be negative.");
-				_grade = value;
-			}
-		}
+		
 
 		private TimeSpan _startTime;
 
@@ -75,22 +64,51 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Assessment(string title,string decription,DateOnly dateCreated, double grade,TimeSpan startTime,TimeSpan endTime)
+		private double _pecentageOfCourse;
+
+		public double PercentageOfCourse
+		{
+			get { return _pecentageOfCourse; }
+			set
+			{
+				if (value <= 0)
+					throw new Exception("The weight of assessment should be more than 0.");
+				_pecentageOfCourse = value;
+			}
+		}
+
+		private double _marks;
+
+		public void SetMarks(double marks)
+		{
+			if (marks < 0 & marks > 100)
+				throw new Exception("The marks for each assessment can not be negative or more than 100.");
+			_marks = marks;
+		}
+
+		public double Grade
+		{
+			get { return _marks * _pecentageOfCourse; }
+		}
+
+		public Assessment(string title,string decription,DateOnly dateCreated,TimeSpan startTime,TimeSpan endTime,double _percentageOfCourse)
 		{
 			Title = title;
 			Description = decription;
 			DateCreated = dateCreated;
-			Grade = grade;
+			
 			StartTime = startTime;
 			EndTime = endTime;
+			PercentageOfCourse = PercentageOfCourse;
 		}
 
-        public Assessment(string title, string decription, DateOnly dateCreated, double grade)
+        public Assessment(string title, string decription, DateOnly dateCreated,double percentageOfCourse)
         {
             Title = title;
             Description = decription;
             DateCreated = dateCreated;
-            Grade = grade;
+			PercentageOfCourse = percentageOfCourse;
+            
            
         }
     }

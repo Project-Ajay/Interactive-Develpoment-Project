@@ -22,8 +22,8 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Exam(string title, string decription, DateOnly dateCreated, double grade, TimeSpan startTime, TimeSpan endTime,bool isOpenBook)
-			:base(title,decription,dateCreated,grade,startTime,endTime)
+		public Exam(string title, string decription, DateOnly dateCreated, TimeSpan startTime, TimeSpan endTime,double percentageOfCourse,bool isOpenBook)
+			:base(title,decription,dateCreated,startTime,endTime,percentageOfCourse)
 		{
 			_isOpenBook = isOpenBook;
 		}
