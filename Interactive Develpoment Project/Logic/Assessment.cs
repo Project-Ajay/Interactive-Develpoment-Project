@@ -51,12 +51,38 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Assessment(string title,string decription,DateOnly date, double grade)
+		private TimeSpan _startTime;
+
+		public TimeSpan StartTime
+		{
+			get { return _startTime; }
+			set
+			{
+				_startTime = value;
+			}
+		}
+
+		private TimeSpan _endTime;
+
+		public TimeSpan EndTime
+		{
+			get { return _endTime; }
+			set
+			{
+				if (_endTime < _startTime)
+					throw new Exception("End Time must be after the start time.");
+				_endTime = value;
+			}
+		}
+
+		public Assessment(string title,string decription,DateOnly date, double grade,TimeSpan startTime,TimeSpan endTime)
 		{
 			Title = title;
 			Description = decription;
 			Date = date;
 			Grade = grade;
+			StartTime = startTime;
+			EndTime = endTime;
 		}
 	}
 }
