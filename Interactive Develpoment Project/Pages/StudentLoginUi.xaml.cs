@@ -28,7 +28,7 @@ public partial class StudentLoginUi : ContentPage
         foreach (Student student in students)
         {
 
-            if (student.StudentId.ToString() == studentId && student.Password.ToString() == studentPassword)
+            if (student.StudentId.ToString() == studentId && student.Password == studentPassword)
             {
                 isStudentFound = true;
             }
