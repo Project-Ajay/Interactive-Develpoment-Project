@@ -9,7 +9,8 @@ public partial class LandingPage : ContentPage
 
     private void AdminButton_Clicked(object sender, EventArgs e)
     {
-
+        AdminUI adminUI = new AdminUI();
+        Navigation.PushAsync(adminUI);
     }
 
     private void StudentButton_Clicked(object sender, EventArgs e)

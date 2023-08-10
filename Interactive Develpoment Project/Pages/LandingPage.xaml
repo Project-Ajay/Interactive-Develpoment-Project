@@ -14,16 +14,16 @@
             />
 
         <Button
+            ImageSource="admin.png" MaximumHeightRequest="90" MaximumWidthRequest="250"          
             x:Name="AdminButton"
             Clicked="AdminButton_Clicked"
-            Text="Administration"
-            Style="{StaticResource CustomButtonStyle}"/>
+            Text="Administration"/>
 
         <Button
+            ImageSource="student.png" MaximumHeightRequest="90" MaximumWidthRequest="250"
             x:Name="StudentButton"
             Clicked="StudentButton_Clicked"
-            Text="Student"
-            Style="{StaticResource CustomButtonStyle}"/>
+            Text="Student"/>
 
     </VerticalStackLayout>
 

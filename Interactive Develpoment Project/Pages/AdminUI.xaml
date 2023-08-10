@@ -6,23 +6,23 @@
     <VerticalStackLayout>
         <Label 
             Text="Admin"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontSize="Title"/>
+            Style="{StaticResource HeaderLabelStyle}"/>
         <Image
             x:Name="AdminPageImage"
-            HeightRequest="600"
-            WidthRequest="600"/>
+            HeightRequest="300"
+            WidthRequest="300"/>
 
-        <HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="13">
 
             <Button
                 Text="Register Student"
-                Clicked="OnRegisterStudent"/>
+                Clicked="OnRegisterStudent"
+                Style="{StaticResource CustomButtonStyle}"/>
 
             <Button
                 Text="Register Course"
-                Clicked="OnRegisterCourse"/>
+                Clicked="OnRegisterCourse"
+                Style="{StaticResource CustomButtonStyle}"/>
 
 
         </HorizontalStackLayout>
