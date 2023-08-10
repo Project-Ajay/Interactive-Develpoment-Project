@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interactive_Develpoment_Project.Logic
 {
-    public static class StudentRepository
+    public  class StudentRepository
     {
         private static List<Student> students = new List<Student>();
 
@@ -22,7 +22,7 @@ namespace Interactive_Develpoment_Project.Logic
             students.Add(student);
         }
 
-        public static Student FindStudentByID(int id)
+        public Student FindStudentByID(int id)
         {
             Student result = null;
             foreach (Student student in students)

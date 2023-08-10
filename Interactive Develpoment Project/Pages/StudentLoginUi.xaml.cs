@@ -42,6 +42,9 @@ public partial class StudentLoginUi : ContentPage
         else
         {
             await DisplayAlert("Error", "Invalid student ID or password. Please try again.", "OK");
+            StudentIDEntry.Text = "";
+            StudentPasswordEntry.Text = "";
+
         }
     }
 }
