@@ -10,7 +10,7 @@ public partial class StudentLoginUi : ContentPage
     //    new Student("Jane Smith", "janesmith@icloud.com", 1001, new DateOnly(2001, 10, 22), "+1 (555) 666-7777", "IcloudPwd1"),
     //    new Student("Michael Johnson", "michaeljohnson@gmail.com", 1002, new DateOnly(2003, 12, 5), "+1 (555) 444-3333", "P@ssw0rd123")
     //};
-
+    
     public StudentLoginUi()
 	{
 		InitializeComponent();
@@ -29,26 +29,27 @@ public partial class StudentLoginUi : ContentPage
 
         bool isStudentFound = false;
 
-        foreach (Student student in students)
-        {
+        //Arnav: Fix the code before pushing it
+        //foreach (Student student in students)
+        //{
 
-            if (student.StudentId.ToString() == studentId && student.Password == studentPassword)
-            {
-                isStudentFound = true;
-            }
-        }
-        if (isStudentFound)
-        {
+        //    if (student.StudentId.ToString() == studentId && student.Password == studentPassword)
+        //    {
+        //        isStudentFound = true;
+        //    }
+        //}
+        //if (isStudentFound)
+        //{
 
-            StudentInfoUi studentInfoUi = new StudentInfoUi();
-            await Navigation.PushAsync(studentInfoUi);
-        }
-        else
-        {
-            await DisplayAlert("Error", "Invalid student ID or password. Please try again.", "OK");
-            StudentIDEntry.Text = "";
-            StudentPasswordEntry.Text = "";
+        //    StudentInfoUi studentInfoUi = new StudentInfoUi();
+        //    await Navigation.PushAsync(studentInfoUi);
+        //}
+        //else
+        //{
+        //    await DisplayAlert("Error", "Invalid student ID or password. Please try again.", "OK");
+        //    StudentIDEntry.Text = "";
+        //    StudentPasswordEntry.Text = "";
 
-        }
+        //}
     }
 }
