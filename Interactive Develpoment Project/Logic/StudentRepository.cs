@@ -34,7 +34,8 @@ namespace Interactive_Develpoment_Project.Logic
             return result;
         }
 
-        public void ReadData(IDataManager)
+        //Arnav: added "temp" to remove the error
+        public void ReadData(IDataManager temp)
         { }
     }
 }
