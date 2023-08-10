@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interactive_Develpoment_Project.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,5 +33,8 @@ namespace Interactive_Develpoment_Project.Logic
             }
             return result;
         }
+
+        public void ReadData(IDataManager)
+        { }
     }
 }
