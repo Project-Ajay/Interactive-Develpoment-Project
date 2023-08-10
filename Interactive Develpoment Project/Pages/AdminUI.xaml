@@ -5,8 +5,27 @@
              Title="AdminUI">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Admin"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="Title"/>
+        <Image
+            x:Name="AdminPageImage"
+            HeightRequest="600"
+            WidthRequest="600"/>
+
+        <HorizontalStackLayout>
+
+            <Button
+                Text="Register Student"
+                Clicked="OnRegisterStudent"/>
+
+            <Button
+                Text="Register Course"
+                Clicked="OnRegisterCourse"/>
+
+
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

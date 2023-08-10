@@ -8,5 +8,14 @@ public partial class AdminUI : ContentPage
 	public AdminUI()
 	{
 		InitializeComponent();
+        AdminPageImage.Source = ImageSource.FromFile("admin.png");
 	}
+
+    private void OnRegisterStudent(System.Object sender, System.EventArgs e)
+    {
+    }
+
+    private void OnRegisterCourse(System.Object sender, System.EventArgs e)
+    {
+    }
 }
