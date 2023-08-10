@@ -9,6 +9,12 @@
         <Label
             Text="Student Login" Style="{StaticResource HeaderLabelStyle}"/>
 
+        <Image
+            Source="student.png"
+            WidthRequest="250"
+            />
+
+
         <Entry
             x:Name="StudentIDEntry"
             Placeholder="Enter Student ID"
