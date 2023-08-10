@@ -6,4 +6,9 @@ public partial class AddStudentPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void AddStudent_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

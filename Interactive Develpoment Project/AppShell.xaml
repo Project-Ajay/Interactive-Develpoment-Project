@@ -10,7 +10,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate pages:StudentLoginUi}"
+        ContentTemplate="{DataTemplate pages:AddStudentPage}"
         Route="MainPage" />
 
 </Shell>
