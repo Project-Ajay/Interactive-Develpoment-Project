@@ -58,6 +58,7 @@
 	  <MauiXaml Remove="BusinessLogic\**" />
 	  <None Remove="BusinessLogic\**" />
 	  <None Remove="DataAccess\" />
+	  <None Remove="Resources\Images\admin.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -81,5 +82,8 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="DataAccess\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\admin.png" />
 	</ItemGroup>
 </Project>
