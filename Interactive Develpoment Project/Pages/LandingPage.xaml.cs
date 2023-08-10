@@ -6,4 +6,15 @@ public partial class LandingPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void AdminButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void StudentButton_Clicked(object sender, EventArgs e)
+    {
+        StudentLoginUi studentLoginUi = new StudentLoginUi();
+        Navigation.PushAsync(studentLoginUi);
+    }
 }

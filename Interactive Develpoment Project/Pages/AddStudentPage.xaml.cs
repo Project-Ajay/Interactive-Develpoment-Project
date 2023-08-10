@@ -17,6 +17,8 @@ public partial class AddStudentPage : ContentPage
 		bool isDomesticStudent;
 		bool isReqistered;
 
+		DisplayAlert("Details","Student Created","OK");
+
 
     }
 }
