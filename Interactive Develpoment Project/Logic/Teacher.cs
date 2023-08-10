@@ -7,20 +7,13 @@ namespace Interactive_Develpoment_Project.Logic
 		private string _teacherLastName;
 		private int _teacherId;
 		private string _teacherEmail;
+        private int _teacherPhone;
 		private DateOnly _teacherDOB;
-        private int? _teacherPhone;
-
-		private string _teacherAddress;
-		private string _teacherCity;
-		private string _teacherZip;
-		private string _teacherCountry;
-
-        private string _teacherDepartment;
 		private double _teacherSalary;
-		private bool _teacherEmploymentStatus;
+		private string _password;
 
-        private List<string> _teacherSubjects = new List<string>();
-		private List<Schedule> _teacherSchedule = new List<Schedule>();
+		// will implement later
+		//private List<Schedule> _teacherSchedule = new List<Schedule>();
 
 
 		public string FirstName
