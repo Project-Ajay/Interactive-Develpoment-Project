@@ -8,9 +8,18 @@ namespace Interactive_Develpoment_Project.Logic
 		private int _studentId;
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
+<<<<<<< Updated upstream
 		private bool _isDomesticStudent;
 		private string _password;
 		private bool _isRegistered; 
+=======
+		
+		private string _password;
+		
+		private List<Course> _courses = new List<Course>();
+
+
+>>>>>>> Stashed changes
 
 		private int _count = 0999;
 
@@ -149,11 +158,22 @@ namespace Interactive_Develpoment_Project.Logic
             return password.Any(char.IsDigit);
         }
 
+		//student can add course to study
+		public void AddCourse(Course course)
+		{
+			foreach(Course course1 in _courses)
+			{
+				if (course1.CourseId == course.CourseId)
+					throw new Exception("This course has already finished or processing.");
+			}
+			_courses.Add(course);
+		}
+
 
 
 
         //Constructor 
-        public Student(string StudentName,string StudentEmail,int StudentId,DateOnly DateOfBirth,string StudentPhoneNumber,string password,bool studentType)
+        public Student(string StudentName,string StudentEmail,int StudentId,DateOnly DateOfBirth,string StudentPhoneNumber,string password)
 		{
 			_count++;
 			_studentId = _count;
@@ -164,7 +184,7 @@ namespace Interactive_Develpoment_Project.Logic
 			_dateOfBirth = DateOfBirth;
 			_studentPhoneNumber = StudentPhoneNumber;
 			_password = password;
-			_isDomesticStudent = studentType;
+			
 
 
 		}
