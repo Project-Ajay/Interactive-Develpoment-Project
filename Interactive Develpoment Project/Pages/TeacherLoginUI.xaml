@@ -9,7 +9,7 @@
 
         <Image
             Source="teacher.png"
-            WidthRequest="250"
+            WidthRequest="300"
             />
 
 

@@ -10,8 +10,8 @@
             Text="Student Login" Style="{StaticResource HeaderLabelStyle}"/>
 
         <Image
-            Source="student.png"
-            WidthRequest="250"
+            Source="student.png" HeightRequest="300"
+            WidthRequest="300"
             />
 
 

@@ -4,9 +4,8 @@
              x:Class="Interactive_Develpoment_Project.Pages.StudentInfoUi"
              Title="StudentInfoUi">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label
+            Text="Studnet Details"
+            Style="{StaticResource HeaderLabelStyle}"/>
     </VerticalStackLayout>
 </ContentPage>
