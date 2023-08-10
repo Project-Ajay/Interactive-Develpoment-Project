@@ -9,6 +9,14 @@ public partial class AddStudentPage : ContentPage
 
     private void AddStudent_Clicked(object sender, EventArgs e)
     {
+		string studentName = StudentNameEnty.Text;
+		string studentEmail = EmailEntry.Text;
+		string studentPhoneNumber = PhoneNumberEntry.Text;
+		string studentPassword = PasswordEntry.Text;
+		DateOnly BirthDate;
+		bool isDomesticStudent;
+		bool isReqistered;
+
 
     }
 }
