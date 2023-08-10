@@ -8,21 +8,13 @@ namespace Interactive_Develpoment_Project.Logic
 		private int _studentId;
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
-<<<<<<< Updated upstream
 		private bool _isDomesticStudent;
 		private string _password;
 		private bool _isRegistered; 
-=======
-		
-		private string _password;
-		
-		private List<Course> _courses = new List<Course>();
-
-
->>>>>>> Stashed changes
 
 		private int _count = 0999;
 
+		private List<Course> _courses = new List<Course>();
 
 		//StudentName property
 		public string StudentName
@@ -167,6 +159,11 @@ namespace Interactive_Develpoment_Project.Logic
 					throw new Exception("This course has already finished or processing.");
 			}
 			_courses.Add(course);
+		}
+
+		public List<Course> GetCourses()
+		{
+			return _courses;
 		}
 
 
