@@ -4,9 +4,32 @@
              x:Class="Interactive_Develpoment_Project.Pages.AdminLoginUI"
              Title="AdminLoginUI">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label
+            Text="Administration Login" Style="{StaticResource HeaderLabelStyle}"/>
+
+        <Image
+            Source="adminavatar.png"
+            WidthRequest="200"
+            />
+
+
+        <Entry
+            x:Name="AdminIDEntry"
+            Placeholder="Enter Adminstartion ID"
+            Style="{StaticResource LargeEntryStyle}"/>
+
+        <Entry
+            x:Name="AdminPasswordEntry"
+            Placeholder="Enter Password"
+            Style="{StaticResource LargeEntryStyle}"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Padding="50">
+            <Button
+                x:Name="AdminLoginButton" 
+                Clicked="AdminLoginButton_Clicked"
+                Text="Login"
+                Style="{StaticResource CustomButtonStyle}"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

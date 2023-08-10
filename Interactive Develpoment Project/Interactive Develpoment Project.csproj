@@ -59,6 +59,7 @@
 	  <None Remove="BusinessLogic\**" />
 	  <None Remove="DataAccess\" />
 	  <None Remove="Resources\Images\admin.png" />
+	  <None Remove="Resources\Images\adminavatar.png" />
 	  <None Remove="Resources\Images\student.png" />
 	</ItemGroup>
 
