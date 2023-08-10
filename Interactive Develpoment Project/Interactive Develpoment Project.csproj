@@ -61,6 +61,7 @@
 	  <None Remove="Resources\Images\admin.png" />
 	  <None Remove="Resources\Images\adminavatar.png" />
 	  <None Remove="Resources\Images\student.png" />
+	  <None Remove="Resources\Images\teacher.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -82,6 +83,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\StudentLoginUi.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\TeacherLoginUI.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

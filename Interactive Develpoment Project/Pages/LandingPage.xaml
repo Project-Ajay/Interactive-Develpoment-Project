@@ -20,6 +20,12 @@
             Text="Administration"/>
 
         <Button
+            ImageSource="teacher.png" MaximumHeightRequest="90" MaximumWidthRequest="250"
+            x:Name="TeacherButton"
+            Clicked="TeacherButton_Clicked"
+            Text="Teacher"/>
+
+        <Button
             ImageSource="student.png" MaximumHeightRequest="90" MaximumWidthRequest="250"
             x:Name="StudentButton"
             Clicked="StudentButton_Clicked"

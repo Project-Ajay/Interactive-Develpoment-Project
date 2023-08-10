@@ -17,4 +17,10 @@ public partial class LandingPage : ContentPage
         StudentLoginUi studentLoginUi = new StudentLoginUi();
         Navigation.PushAsync(studentLoginUi);
     }
+
+    private void TeacherButton_Clicked(object sender, EventArgs e)
+    {
+        TeacherLoginUI teacherLoginUI = new TeacherLoginUI();
+        Navigation.PushAsync(teacherLoginUI);
+    }
 }
