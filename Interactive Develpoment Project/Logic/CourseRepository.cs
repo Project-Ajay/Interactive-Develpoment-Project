@@ -20,7 +20,7 @@ namespace Interactive_Develpoment_Project.Logic
 		{
 			foreach(Course course in _courseList)
 			{
-				if (course.CourseId == id)
+				if (course.CourseId == id.ToString())
 					return course;
 			}
 			return null;
