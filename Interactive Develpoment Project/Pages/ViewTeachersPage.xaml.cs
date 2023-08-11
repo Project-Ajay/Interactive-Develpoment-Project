@@ -29,8 +29,10 @@ public partial class ViewTeachersPage : ContentPage
     {
 		if (SelectedTeacher == null)
 		{
-			throw new ArgumentException("Select a teacher you would like to delete from the database");
-		}
+			await DisplayAlert("Attention", "Select a teacher you would like to delete from the database", "OK");
+			return;
+
+        }
 
 		bool choice = await DisplayAlert("Attention", $"Are you sre you would like to delete {_selectedTeacher.TeacherFirstName} from the database", "Yes", "No");
 
