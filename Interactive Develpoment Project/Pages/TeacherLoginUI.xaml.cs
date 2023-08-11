@@ -10,13 +10,6 @@ public partial class TeacherLoginUI : ContentPage
     {
         InitializeComponent();
     }
-    //testing if constructor overloading will work
-    public TeacherLoginUI(TeacherRepository teacherRepository)
-	{
-		InitializeComponent();
-
-        _teacherRepository = teacherRepository;
-    }
 
     private async void TeacherLoginButton_Clicked(object sender, EventArgs e)
     {

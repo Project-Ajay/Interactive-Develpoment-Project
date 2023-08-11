@@ -20,6 +20,11 @@
                 Style="{StaticResource CustomButtonStyle}"/>
 
             <Button
+                Text="Register Teacher"
+                Clicked="OnRegisterTeacher"
+                Style="{StaticResource CustomButtonStyle}"/>
+
+            <Button
                 Text="Register Course"
                 Clicked="OnRegisterCourse"
                 Style="{StaticResource CustomButtonStyle}"/>

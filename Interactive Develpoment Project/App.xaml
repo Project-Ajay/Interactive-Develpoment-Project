@@ -17,6 +17,7 @@
                 <Setter Property="FontSize" Value="32"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
+            
 
             <Style x:Key="LargeEntryStyle" TargetType="Entry">
                 <Setter Property="BackgroundColor" Value="White"/>
@@ -43,6 +44,11 @@
                 <Setter Property="TextColor" Value="Green"/>
                 <Setter Property="CornerRadius" Value="15"/>
                 <Setter Property="FontAttributes" Value="Italic"/>
+            </Style>
+
+            <Style x:Key="TeacherLoginEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black"/>
             </Style>
 
 

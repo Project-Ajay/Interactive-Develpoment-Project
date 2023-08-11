@@ -74,6 +74,9 @@
 	  <None Remove="UserInterface\" />
 	</ItemGroup>
 	<ItemGroup>
+	  <MauiXaml Update="Pages\AddTeacherPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\AdminLoginUI.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

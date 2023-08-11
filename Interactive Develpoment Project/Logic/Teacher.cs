@@ -11,7 +11,6 @@ namespace Interactive_Develpoment_Project.Logic
 		private string _teacherEmail;
 		private string _teacherPhone;
 		private DateOnly _teacherDOB;
-		private float _teacherSalary;
 		private string _password;
 		private static int _count = 999;
 
@@ -59,7 +58,7 @@ namespace Interactive_Develpoment_Project.Logic
 			get { return _teacherPhone; }
 			set
 			{
-				if (string.IsNullOrWhiteSpace(value) || value.Any(char.IsLetter) || value.Any(char.IsSymbol))
+				if (string.IsNullOrWhiteSpace(value) || !value.Any(char.IsDigit))
 					throw new ArgumentException("Enter a valid phone number");
 				_teacherPhone = value;
 			}
@@ -73,17 +72,6 @@ namespace Interactive_Develpoment_Project.Logic
 				if (value >= DateOnly.FromDateTime(DateTime.Today))
 					throw new ArgumentException("Enter a valid date of birth");
 				_teacherDOB = value;
-			}
-		}
-
-		public float TeacherSalary
-		{
-			get { return _teacherSalary; }
-			set
-			{
-				if (value <= 0)
-					throw new ArgumentException("Salary must be greater than 0");
-				_teacherSalary = value;
 			}
 		}
 
@@ -113,14 +101,13 @@ namespace Interactive_Develpoment_Project.Logic
 
 
 		// Constructor
-		public Teacher(string firstname, string lastname, string email, string phone, DateOnly dob, float salary, string password)
+		public Teacher(string firstname, string lastname, string email, string phone, DateOnly dob, string password)
 		{
 			TeacherFirstName = firstname;
 			TeacherLastName = lastname;
 			TeacherEmail = email;
 			TeacherPhone = phone;
 			TeacherDOB = dob;
-			TeacherSalary = salary;
 			Password = password;
 			//calls the methid to get a unique id for every teacher and initalizes the _teacherid field with it
 			_teacherId = GenerateUniqueID(firstname, lastname);

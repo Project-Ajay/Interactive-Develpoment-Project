@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Interactive_Develpoment_Project.Pages.AddTeacherPage"
+             Title="AddTeacherPage"
+             Background="powderblue">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" Spacing="30">
+            <Label Text="Add Student"
+                   Style="{StaticResource HeaderLabelStyle}"
+                   Margin="10" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Name" />
+                <HorizontalStackLayout Spacing="15">
+                    <Entry x:Name="firstNameEntry"
+                           Placeholder="First Name"
+                           WidthRequest="200"
+                           Style="{StaticResource Key=TeacherLoginEntry}" />
+                    <Entry x:Name="lastNameEntry"
+                           Placeholder="Last Name"
+                           WidthRequest="200"
+                           Style="{StaticResource Key=TeacherLoginEntry}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Email" />
+                <Entry x:Name="emailEntry"
+                       Placeholder="abc@email.com"
+                       Style="{StaticResource Key=TeacherLoginEntry}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Phone Number" />
+                <Entry x:Name="phoneEntry"
+                       Placeholder="123 567 8900"
+                       Style="{StaticResource Key=TeacherLoginEntry}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Date of Birth" />
+                <DatePicker x:Name="dateofbirthEntry"
+                            Style="{StaticResource Key=TeacherLoginEntry}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Password" />
+                <Entry x:Name="passwordEntry"
+                       Placeholder="Must have 8 at least characters"
+                       Style="{StaticResource Key=TeacherLoginEntry}" />
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
+                <Button x:Name="AddTeacherBtn"
+                        Text="Add Teacher"
+                        WidthRequest="150"
+                        Margin="0,20"
+                        Clicked="AddTeacherBtn_Clicked" />
+
+                <Button
+                    x:Name="BackBtn"
+                    Text="Back"
+                    WidthRequest="100"
+                    Margin="0, 20"
+                    Clicked="BackBtn_Clicked"
+                    />
+
+                <Button x:Name="ViewTeachersBtn"
+                        Text="View Teachers"
+                        WidthRequest="150"
+                        Margin="0,20"
+                        Clicked="ViewTeachersBtn_Clicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
