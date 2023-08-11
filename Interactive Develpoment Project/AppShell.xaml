@@ -6,11 +6,11 @@
     xmlns:local="clr-namespace:Interactive_Develpoment_Project"
     xmlns:pages="clr-namespace:Interactive_Develpoment_Project.Pages"
     Shell.FlyoutBehavior="Disabled"
-    BackgroundColor="#509CAF">
+    BackgroundColor="{StaticResource Main}">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate pages:LandingPage}"
+        ContentTemplate="{DataTemplate pages:AddCoursePage}"
         Route="MainPage" />
 
 </Shell>

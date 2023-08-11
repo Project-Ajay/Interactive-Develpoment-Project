@@ -4,7 +4,6 @@
              x:Class="Interactive_Develpoment_Project.Pages.TeacherLoginUI"
              Title="TeacherLoginUI"
              Background="powderblue">
-
     <VerticalStackLayout Spacing="10">
         <Label
             Text="Teacher Login" Style="{StaticResource HeaderLabelStyle}"/>

@@ -37,7 +37,7 @@
                 Text="Description"
                    Style="{StaticResource LargerEntryLabel}"/>
             <Entry 
-                x:Name="DescriptionEntry"
+                x:Name="CourseName"
                 Placeholder="e.g Interactive Development"
                 Style="{StaticResource AddingCourseEntry}"/>
         </HorizontalStackLayout>

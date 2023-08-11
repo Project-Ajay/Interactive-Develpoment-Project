@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.LandingPage"
              Title="LandingPage"
-             Background="#509CAF">
+             Background="White">
 
     <VerticalStackLayout HorizontalOptions="Center" Spacing="35">
         <Label 

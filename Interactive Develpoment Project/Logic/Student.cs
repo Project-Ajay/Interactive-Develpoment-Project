@@ -8,6 +8,7 @@ namespace Interactive_Develpoment_Project.Logic
 		private int _studentId;
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
+		private bool _isDomesticStudent;
 		private string _password;
 		private bool _isRegistered; 
 
@@ -137,16 +138,14 @@ namespace Interactive_Develpoment_Project.Logic
 
 
         //Constructor
-        //studentId auto generated
+		//studentId auto generated
         public Student(string studentName,string studentEmail,DateOnly dateOfBirth,string studentPhoneNumber,string password)
 		{
-
 			StudentName = studentName;
 			StudentEmail = studentEmail;
 			StudentPhoneNumber = studentPhoneNumber;
 			Password = password;
 			DateOfBirth = dateOfBirth;
-			_studentId = _count++;
 
 			
 
