@@ -15,6 +15,11 @@ namespace Interactive_Develpoment_Project.Logic
             _teachers.Add(teacher);
         }
 
+        public void DeleteTeacher(Teacher teacher)
+        {
+            _teachers.Remove(teacher);
+        }
+
         public Teacher FindTeacherByFirstName(string firstname)
         {
             foreach(Teacher teacher in _teachers)

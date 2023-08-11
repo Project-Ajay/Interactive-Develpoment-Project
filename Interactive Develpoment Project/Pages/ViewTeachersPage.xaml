@@ -6,7 +6,7 @@
              Background="powderblue">
     <ScrollView>
         <VerticalStackLayout>
-            <ListView x:Name="TeachersListView" Background="green" ItemsSource="{Binding TeacherRepository.Teachers}" Margin="20">
+            <ListView x:Name="TeachersListView" Background="green" ItemsSource="{Binding TeacherRepository.Teachers}" SelectedItem="{Binding SelectedTeacher, Mode=TwoWay}" Margin="20">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -74,12 +74,21 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button
-                x:Name="BackBtn"
-                Text="Back"
-                WidthRequest="100"
-                Clicked="BackBtn_Clicked"
-                />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15" Margin="0,10">
+                <Button
+                    x:Name="DeleteBtn"
+                    Text="Delete"
+                    WidthRequest="100"
+                    Clicked="DeleteBtn_Clicked"
+                    />
+                
+                <Button
+                    x:Name="BackBtn"
+                    Text="Back"
+                    WidthRequest="100"
+                    Clicked="BackBtn_Clicked"
+                 />
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
