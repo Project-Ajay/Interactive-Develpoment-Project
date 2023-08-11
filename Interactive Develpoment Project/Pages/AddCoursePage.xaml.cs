@@ -19,10 +19,11 @@ public partial class AddCoursePage : ContentPage
     {
 		try
 		{
+			//Arnav: Fixed errors here make sure everything is correct
 			string courseId = CourseIdEntry.Text;
 			CourseType courseType =(CourseType) CourseTypePicker.SelectedItem;
 			string courseName = CourseNameEntry.Text;
-			string description = DescriptionEntry.Text;
+			string description = CourseDescriptionEntry.Text;
 
 			Course course = new Course(courseId, courseType, courseName, description);
 
