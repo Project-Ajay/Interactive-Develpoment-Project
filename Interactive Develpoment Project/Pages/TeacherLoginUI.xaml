@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.TeacherLoginUI"
              Title="TeacherLoginUI"
-             Background="red">
-    <VerticalStackLayout>
+             Background="powderblue">
+    <VerticalStackLayout Spacing="10">
         <Label
             Text="Teacher Login" Style="{StaticResource HeaderLabelStyle}"/>
 

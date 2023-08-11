@@ -1,15 +1,39 @@
+﻿using Interactive_Develpoment_Project.Logic;
+
 namespace Interactive_Develpoment_Project.Pages;
 
 public partial class TeacherLoginUI : ContentPage
 {
-	public TeacherLoginUI()
+    private TeacherRepository _teacherRepository;
+
+    public TeacherLoginUI()
+    {
+        InitializeComponent();
+    }
+    //testing if constructor overloading will work
+    public TeacherLoginUI(TeacherRepository teacherRepository)
 	{
 		InitializeComponent();
-	}
 
-    private void TeacherLoginButton_Clicked(object sender, EventArgs e)
+        _teacherRepository = teacherRepository;
+    }
+
+    private async void TeacherLoginButton_Clicked(object sender, EventArgs e)
     {
+        string teacherId = TeacherIDEntry.Text;
+        string password = TeacherPasswordEntry.Text;
 
+        Teacher teacher = _teacherRepository.FindTeacherById(teacherId);
+
+        if(teacher != null && teacher.Password == password)
+        {
+            await DisplayAlert("Login Successful", $"Welcome, {teacher.TeacherFirstName}", "Ok");
+        }
+        else
+        {
+            await DisplayAlert("", "\t\t‼️\n\n\tInvalid ID or Password", "Ok");
+            TeacherPasswordEntry.Text = "";
+        }
     }
 
     private void showPassword_clicked(object sender, EventArgs e)

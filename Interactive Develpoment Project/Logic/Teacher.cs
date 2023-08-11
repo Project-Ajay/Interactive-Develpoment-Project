@@ -5,7 +5,8 @@ namespace Interactive_Develpoment_Project.Logic
 {
 	public class Teacher
 	{
-		private string _teacherName;
+		private string _teacherFirstName;
+		private string _teacherLastName;
 		private string _teacherId;
 		private string _teacherEmail;
 		private string _teacherPhone;
@@ -18,18 +19,29 @@ namespace Interactive_Develpoment_Project.Logic
 		//private List<Schedule> _teacherSchedule = new List<Schedule>();
 
 
-		public string TeacherName
+		public string TeacherFirstName
 		{
-			get { return _teacherName; }
+			get { return _teacherFirstName; }
 			set
 			{
 				if (string.IsNullOrEmpty(value))
-					throw new ArgumentException("Teacher's name is required");
-				_teacherName = value;
+					throw new ArgumentException("Teacher's first name is required");
+				_teacherFirstName = value;
 			}
 		}
 
-		public string TeacherId { get { return _teacherId; } }
+        public string TeacherLastName
+        {
+            get { return _teacherLastName; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException("Teacher's last name is required");
+                _teacherLastName = value;
+            }
+        }
+
+        public string TeacherId { get { return _teacherId; } }
 
 		public string TeacherEmail
 		{
@@ -86,25 +98,32 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		private void GenerateUniqueID()
+		//this method generates a unique id for every new teacher registered
+		private string GenerateUniqueID(string firstname, string lastname)
 		{
+			//count adds 1 to itself everytime the methid is called (first number would be 1000)
 			_count++;
-
-			_teacherId = $"CA{_count}";
+			//grabs the first character of their first and last name
+			char firstChar = firstname[0];
+			char secondChar = lastname[0];
+			//combines everything to produce a unique string as the teachers ID
+			return $"{firstChar}{secondChar}{_count}";
 		}
 
 
 
 		// Constructor
-		public Teacher(string name, string email, string phone, DateOnly dob, float salary, string password)
+		public Teacher(string firstname, string lastname, string email, string phone, DateOnly dob, float salary, string password)
 		{
-			TeacherName = name;
+			TeacherFirstName = firstname;
+			TeacherLastName = lastname;
 			TeacherEmail = email;
 			TeacherPhone = phone;
 			TeacherDOB = dob;
 			TeacherSalary = salary;
 			Password = password;
-			GenerateUniqueID();
+			//calls the methid to get a unique id for every teacher and initalizes the _teacherid field with it
+			_teacherId = GenerateUniqueID(firstname, lastname);
 		}
 	}
 }

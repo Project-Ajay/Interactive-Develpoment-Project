@@ -15,13 +15,25 @@ namespace Interactive_Develpoment_Project.Logic
             _teachers.Add(teacher);
         }
 
-        public Teacher FindTeacherByName(string name)
+        public Teacher FindTeacherByFirstName(string firstname)
         {
             foreach(Teacher teacher in _teachers)
             {
-                //compares the name provided and all the names in the database
+                //compares the firstname provided and all the firstnames in the database
                 //learned how to ignore case while checking string here: https://learn.microsoft.com/en-us/dotnet/csharp/how-to/compare-strings
-                if (string.Equals(name, teacher.TeacherName, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(firstname, teacher.TeacherFirstName, StringComparison.OrdinalIgnoreCase))
+                    return teacher;
+            }
+            return null;
+        }
+
+        public Teacher FindTeacherByLastName(string lastname)
+        {
+            foreach (Teacher teacher in _teachers)
+            {
+                //compares the lastname provided and all the lastnames in the database
+                //learned how to ignore case while checking string here: https://learn.microsoft.com/en-us/dotnet/csharp/how-to/compare-strings
+                if (string.Equals(lastname, teacher.TeacherLastName, StringComparison.OrdinalIgnoreCase))
                     return teacher;
             }
             return null;
