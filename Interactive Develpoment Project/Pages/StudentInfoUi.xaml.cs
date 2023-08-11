@@ -2,13 +2,11 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class StudentInfoUi : ContentPage
 {
-	public StudentInfoUi()
+	string StudentId;
+	public StudentInfoUi(string studentId)
 	{
 		InitializeComponent();
+		StudentId = studentId;
 	}
 
-    private void SubmitButton_Clicked(object sender, EventArgs e)
-    {
-
-    }
 }
