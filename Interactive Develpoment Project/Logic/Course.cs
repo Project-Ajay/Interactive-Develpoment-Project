@@ -82,6 +82,11 @@ namespace Interactive_Develpoment_Project.Logic
 			CourseName = courseName;
 			Description = description;
 		}
-	}
+
+        public override string ToString()
+        {
+			return $"{CourseId},{CourseType},{CourseName},{Description}";
+        }
+    }
 }
 
