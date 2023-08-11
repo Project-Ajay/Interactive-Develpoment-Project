@@ -8,7 +8,12 @@ public partial class AddTeacherPage : ContentPage
 	public AddTeacherPage()
 	{
 		InitializeComponent();
-	}
+
+        //For Testing
+        _repository.CreateTeacher(new Teacher("John", "Doe", "jdoe@gmail.com", "192802930", new DateOnly(2000, 11, 10), "Password123"));
+        _repository.CreateTeacher(new Teacher("Tim", "Baker", "Timmy@gmail.com", "27498232930", new DateOnly(1982, 12, 30), "TimBaker123"));
+        _repository.CreateTeacher(new Teacher("bob", "builder", "bob@gmail.com", "2340321928", new DateOnly(2003, 03, 01), "Bobbby123"));
+    }
 
     private async void AddTeacherBtn_Clicked(object sender, EventArgs e)
     {

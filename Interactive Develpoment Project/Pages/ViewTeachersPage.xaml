@@ -6,29 +6,31 @@
              Background="powderblue">
     <ScrollView>
         <VerticalStackLayout>
-            <ListView x:Name="TeachersListView" Background="aliceblue" ItemsSource="{Binding TeacherRepository}">
+            <ListView x:Name="TeachersListView" Background="green" ItemsSource="{Binding TeacherRepository.Teachers}" Margin="20">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <VerticalStackLayout>
+                                <VerticalStackLayout Margin="10,10,0,10">
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="Name: "
+                                            Text="Name:         "
                                             />
                                         <Label
                                             Text="{Binding TeacherFirstName}"
+                                            HorizontalOptions="StartAndExpand"
                                             />
                                         <Label
                                             Text=" "
                                             />
                                         <Label
                                             Text="{Binding TeacherLastName}"
+                                            HorizontalOptions="StartAndExpand"
                                             />
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="ID: "
+                                            Text="Login ID:     "
                                             />
                                         <Label
                                             Text="{Binding TeacherId}"
@@ -36,7 +38,7 @@
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="Email: "
+                                            Text="Email:          "
                                             />
                                         <Label
                                             Text="{Binding TeacherEmail}"
@@ -44,7 +46,7 @@
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="Phone Number: "
+                                            Text="Phone:        "
                                             />
                                         <Label
                                             Text="{Binding TeacherPhone}"
@@ -52,7 +54,7 @@
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="Date Of Birth"
+                                            Text="DOB:           "
                                             />
                                         <Label
                                             Text="{Binding TeacherDOB}"
@@ -60,10 +62,10 @@
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>
                                         <Label
-                                            Text="Password"
+                                            Text="Password:   "
                                             />
                                         <Label
-                                            Text="Password"
+                                            Text="{Binding Password}"
                                             />
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
