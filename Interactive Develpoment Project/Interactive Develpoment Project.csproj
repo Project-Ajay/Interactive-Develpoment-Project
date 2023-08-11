@@ -60,6 +60,7 @@
 	  <None Remove="DataAccess\" />
 	  <None Remove="Resources\Images\admin.png" />
 	  <None Remove="Resources\Images\adminavatar.png" />
+	  <None Remove="Resources\Images\showPassword.png" />
 	  <None Remove="Resources\Images\student.png" />
 	  <None Remove="Resources\Images\teacher.png" />
 	</ItemGroup>

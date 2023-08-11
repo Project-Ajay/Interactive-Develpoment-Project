@@ -11,4 +11,8 @@ public partial class TeacherLoginUI : ContentPage
     {
 
     }
+
+    private void showPassword_clicked(object sender, EventArgs e)
+    {
+    }
 }

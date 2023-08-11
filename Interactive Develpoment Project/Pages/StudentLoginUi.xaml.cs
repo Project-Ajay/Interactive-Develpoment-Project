@@ -6,9 +6,9 @@ public partial class StudentLoginUi : ContentPage
     //Initialize the list of students (HARD CODED FOR TESTING)
     private List<Student> students = new List<Student>
     {
-        new Student("John Doe", "johndoe@gmail.com", 1000, new DateOnly(2002, 5, 15), "+1 (555) 555-5555", "Pass1234"),
-        new Student("Jane Smith", "janesmith@icloud.com", 1001, new DateOnly(2001, 10, 22), "+1 (555) 666-7777", "IcloudPwd1"),
-        new Student("Michael Johnson", "michaeljohnson@gmail.com", 1002, new DateOnly(2003, 12, 5), "+1 (555) 444-3333", "P@ssw0rd123")
+        new Student("John Doe", "johndoe@gmail.com", new DateOnly(2002, 5, 15), "+1 (555) 555-5555", "Pass1234"),
+        new Student("Jane Smith", "janesmith@icloud.com", new DateOnly(2001, 10, 22), "+1 (555) 666-7777", "IcloudPwd1"),
+        new Student("Michael Johnson", "michaeljohnson@gmail.com", new DateOnly(2003, 12, 5), "+1 (555) 444-3333", "P@ssw0rd123")
     };
     
     public StudentLoginUi()
