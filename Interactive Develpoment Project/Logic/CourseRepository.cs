@@ -20,7 +20,8 @@ namespace Interactive_Develpoment_Project.Logic
 		{
 			foreach(Course course in _courseList)
 			{
-				if (course.CourseId == id)
+                //Arnav: changed from this if (course.CourseId == id)
+                if (course.CourseId.Equals(id))
 					return course;
 			}
 			return null;
