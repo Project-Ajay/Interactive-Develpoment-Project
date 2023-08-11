@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Interactive_Develpoment_Project.Pages.ViewTeachersPage"
+             Title="ViewTeachersPage"
+             Background="powderblue">
+    <ScrollView>
+        <VerticalStackLayout>
+            <ListView x:Name="TeachersListView" Background="aliceblue" ItemsSource="{Binding TeacherRepository}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <VerticalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="Name: "
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherFirstName}"
+                                            />
+                                        <Label
+                                            Text=" "
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherLastName}"
+                                            />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="ID: "
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherId}"
+                                            />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="Email: "
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherEmail}"
+                                            />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="Phone Number: "
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherPhone}"
+                                            />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="Date Of Birth"
+                                            />
+                                        <Label
+                                            Text="{Binding TeacherDOB}"
+                                            />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Text="Password"
+                                            />
+                                        <Label
+                                            Text="Password"
+                                            />
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                x:Name="BackBtn"
+                Text="Back"
+                WidthRequest="100"
+                Clicked="BackBtn_Clicked"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

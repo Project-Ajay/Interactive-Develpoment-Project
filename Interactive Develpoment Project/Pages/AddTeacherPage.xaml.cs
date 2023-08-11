@@ -39,9 +39,9 @@ public partial class AddTeacherPage : ContentPage
         }
     }
 
-    private void ViewTeachersBtn_Clicked(object sender, EventArgs e)
+    private async void ViewTeachersBtn_Clicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new ViewTeachersPage(_repository));
     }
 
     private async void BackBtn_Clicked(object sender, EventArgs e)
