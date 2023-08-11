@@ -3,13 +3,15 @@ namespace Interactive_Develpoment_Project.Logic
 {
 	public class Course
 	{
-		private int _courseId;
+		private string _courseId;
 
-		public int CourseId
+		public string CourseId
 		{
 			get { return _courseId; }
 			set
 			{
+				if (string.IsNullOrEmpty(value))
+					throw new Exception("The course Id was not set properly.");
 				_courseId = value;
 			}
 		}
@@ -75,7 +77,7 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-		public Course(int courseId,CourseType courseType,string courseName,string description)
+		public Course(string courseId,CourseType courseType,string courseName,string description)
 		{
 			CourseId = courseId;
 			CourseType = courseType;
