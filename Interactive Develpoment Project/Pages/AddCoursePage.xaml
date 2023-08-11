@@ -3,57 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.AddCoursePage"
              Title="AddCoursePage">
-    <VerticalStackLayout>
-        <Label 
+
+    <VerticalStackLayout Spacing="40" HorizontalOptions="Center">
+
+        <Label
             Text="Add Course Page"
-            FontSize="Title"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Style="{StaticResource HeaderLabelStyle}"/>
 
-        <HorizontalStackLayout>
-            <Label
-                Text="Course Id:"/>
-            <Entry
+        <HorizontalStackLayout Spacing="45">
+            <Label VerticalTextAlignment="Center" 
+                Text="Course ID"
+                Style="{StaticResource LargerEntryLabel}"/>
+            <Entry 
                 x:Name="CourseIdEntry"
-                Placeholder="Prog10065"/>
-            </HorizontalStackLayout>
-        <HorizontalStackLayout>
+                Placeholder="e.g Prog10065"
+                Style="{StaticResource AddingCourseEntry}"/>
+            
+        </HorizontalStackLayout>
 
-            <Label
-                Text="Courser Type: "/>
-            <Picker
-                x:Name="CourseTypePicker"/>
-            </HorizontalStackLayout>
-
-        <HorizontalStackLayout>
-
-            <Label
-                Text="Course Name: "/>
-            <Entry
+        <HorizontalStackLayout Spacing="20">
+            <Label VerticalTextAlignment="Center" 
+                Text="Course Name"
+                   Style="{StaticResource LargerEntryLabel}"/>
+            <Entry 
                 x:Name="CourseNameEntry"
-                Placeholder="Program c#"/>
+                Placeholder="e.g Interactive Development"
+                Style="{StaticResource AddingCourseEntry}"/>
+
         </HorizontalStackLayout>
-        <HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="35">
+            <Label VerticalTextAlignment="Center" 
+                Text="Description"
+                   Style="{StaticResource LargerEntryLabel}"/>
+            <Entry 
+                x:Name="CourseName"
+                Placeholder="e.g Interactive Development"
+                Style="{StaticResource AddingCourseEntry}"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="30">
             <Label
-                Text="Description: "/>
-            <Entry
-                x:Name="DescriptionEntry"
-                Placeholder="Entry level class for C lanuage"/>
+                VerticalTextAlignment="Center"
+                Text="Course Type"
+                Style="{StaticResource LargerEntryLabel}"/>
 
-
+            <Picker
+                x:Name="CourseTypePicker"
+                WidthRequest="250"
+                BackgroundColor="White"/>
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout>
-
-      <Button
-            Text="Add Course"
-            Clicked="OnAddCourse"/>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button
+                x:Name="AddCourse"
+                Text="Add Course"
+                Clicked="AddCourse_Clicked"
+                Style="{StaticResource CustomButtonStyle}"/>
 
             <Button
+                x:Name="DeleteCourse"
                 Text="Delete Course"
-                Clicked="OnDeleteCourse"/>
-</HorizontalStackLayout>
-        <ListView
-            x:Name="CoursesListView"/>
+                Clicked="DeleteCourse_Clicked"
+                Style="{StaticResource CustomButtonStyle}"/>
+        </HorizontalStackLayout>
+
+
     </VerticalStackLayout>
+    
 </ContentPage>

@@ -18,4 +18,19 @@ public partial class AddCoursePage : ContentPage
     void OnDeleteCourse(System.Object sender, System.EventArgs e)
     {
     }
+
+    private void OnAddCourse(object sender, EventArgs e)
+    {
+
+    }
+
+    private void AddCourse_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void DeleteCourse_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
