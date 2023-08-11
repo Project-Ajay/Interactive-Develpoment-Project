@@ -6,4 +6,9 @@ public partial class StudentInfoUi : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void SubmitButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
