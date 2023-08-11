@@ -12,7 +12,7 @@ namespace Interactive_Develpoment_Project.Logic
 		private string _password;
 		private bool _isRegistered; 
 
-		private int _count = 0999;
+		private static int _count = 0999;
 
 
 		//StudentName property
@@ -103,21 +103,6 @@ namespace Interactive_Develpoment_Project.Logic
             }
         }
 
-		//Student Type
-
-		public bool IsDomesticStudent
-		{
-			get
-			{
-				return _isDomesticStudent;
-			}
-			set
-			{
-				_isDomesticStudent = value;
-			}
-		}
-
-
         //Student Password
 
         public string Password
@@ -154,17 +139,15 @@ namespace Interactive_Develpoment_Project.Logic
 
         //Constructor
 		//studentId auto generated
-        public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,string password)
+        public Student(string studentName,string studentEmail,DateOnly dateOfBirth,string studentPhoneNumber,string password)
 		{
-			_count++;
-			_studentId = _count;
+			StudentName = studentName;
+			StudentEmail = studentEmail;
+			StudentPhoneNumber = studentPhoneNumber;
+			Password = password;
+			DateOfBirth = dateOfBirth;
 
-			_studentName = StudentName;
-			_studentId = StudentId;
-			_studentEmail = StudentEmail;
-			_dateOfBirth = DateOfBirth;
-			_studentPhoneNumber = StudentPhoneNumber;
-			_password = password;
+			
 
 
 		}
