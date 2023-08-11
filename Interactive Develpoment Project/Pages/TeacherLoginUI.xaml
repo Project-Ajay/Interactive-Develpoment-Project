@@ -17,13 +17,14 @@
         <Entry
             x:Name="TeacherIDEntry"
             Placeholder="Enter Teacher ID"
+            CharacterSpacing="2"
             Style="{StaticResource LargeEntryStyle}"/>
 
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="-68">
             <Entry
                 x:Name="TeacherPasswordEntry"
                 IsPassword="True"
-                CharacterSpacing="5"
+                CharacterSpacing="2"
                 Placeholder="Enter Password"
                 Style="{StaticResource LargeEntryStyle}"/>
 
