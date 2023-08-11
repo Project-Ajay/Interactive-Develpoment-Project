@@ -4,12 +4,10 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class StudentInfoUi : ContentPage
 {
-	private List<Student> _students;
 
-	public StudentInfoUi(List<Student> students)
+	public StudentInfoUi()
 	{
 		InitializeComponent();
-		_students = students;
 		
 	}
 

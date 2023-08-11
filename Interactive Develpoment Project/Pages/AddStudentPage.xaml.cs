@@ -37,6 +37,6 @@ public partial class AddStudentPage : ContentPage
 
     private void OnViewStudents(System.Object sender, System.EventArgs e)
     {
-		Navigation.PushAsync(new StudentInfoUi(_students));
+		Navigation.PushAsync(new StudentInfoUi());
     }
 }
