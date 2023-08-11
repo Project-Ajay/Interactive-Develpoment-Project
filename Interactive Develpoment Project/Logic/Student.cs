@@ -152,8 +152,9 @@ namespace Interactive_Develpoment_Project.Logic
 
 
 
-        //Constructor 
-        public Student(string StudentName,string StudentEmail,int StudentId,DateOnly DateOfBirth,string StudentPhoneNumber,string password)
+        //Constructor
+		//studentId auto generated
+        public Student(string StudentName,string StudentEmail,DateOnly DateOfBirth,string StudentPhoneNumber,string password)
 		{
 			_count++;
 			_studentId = _count;

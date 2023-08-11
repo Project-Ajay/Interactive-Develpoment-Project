@@ -1,7 +1,10 @@
-﻿namespace Interactive_Develpoment_Project.Pages;
+﻿using Interactive_Develpoment_Project.Logic;
+namespace Interactive_Develpoment_Project.Pages;
 
 public partial class AddStudentPage : ContentPage
 {
+	private List<Student> _students = new List<Student>();
+
 	public AddStudentPage()
 	{
 		InitializeComponent();
@@ -9,16 +12,31 @@ public partial class AddStudentPage : ContentPage
 
     private void AddStudent_Clicked(object sender, EventArgs e)
     {
-		string studentName = StudentNameEnty.Text;
-		string studentEmail = EmailEntry.Text;
-		string studentPhoneNumber = PhoneNumberEntry.Text;
-		string studentPassword = PasswordEntry.Text;
-		DateOnly BirthDate;
-		bool isDomesticStudent;
-		bool isReqistered;
+		try
+		{
+			string studentName = StudentNameEnty.Text;
+			string studentEmail = EmailEntry.Text;
+			string studentPhoneNumber = PhoneNumberEntry.Text;
+			string studentPassword = PasswordEntry.Text;
+			DateOnly BirthDate = DateOnly.FromDateTime(BirthDatePicker.Date);
+			bool isDomesticStudent = IsDomesticCheckBox.IsChecked;
+			bool isReqistered = IsRegisterCheckBox.IsChecked;
 
-		DisplayAlert("Details","Student Created","OK");
+			Student student = new Student(studentName, studentEmail, BirthDate, studentPhoneNumber, studentPassword);
 
+			DisplayAlert("New Student Registered", $"Name: {student.StudentName}\nStudent Id:{student.StudentId}", "Ok");
 
+			_students.Add(student);
+
+		}
+		catch(Exception ex)
+		{
+			DisplayAlert("Invalid Input", $"{ex.Message}", "Ok");
+		}
+    }
+
+    private void OnViewStudents(System.Object sender, System.EventArgs e)
+    {
+		Navigation.PushAsync(new StudentInfoUi(_students));
     }
 }

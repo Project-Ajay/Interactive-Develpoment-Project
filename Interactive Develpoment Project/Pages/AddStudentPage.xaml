@@ -22,7 +22,7 @@
 
             <DatePicker
                 x:Name="BirthDatePicker"/>
-
+            
             <Label
                 Text="Email"
                 />
@@ -67,15 +67,19 @@
                 IsChecked="False"/>
             </HorizontalStackLayout>
 
+            <HorizontalStackLayout>
             <Button
                 x:Name="AddStudent"
                 Clicked="AddStudent_Clicked"
                 Text="Add Student"
                 Style="{StaticResource CustomButtonStyle}"/>
             
+            <Button
+                 Text="View Registered Students"
+                 Clicked="OnViewStudents"
+                 Style="{StaticResource CustomButtonStyle}"/>
 
-
-
+</HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
