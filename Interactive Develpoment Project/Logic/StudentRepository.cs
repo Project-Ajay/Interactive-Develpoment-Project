@@ -9,24 +9,25 @@ namespace Interactive_Develpoment_Project.Logic
 {
     public  class StudentRepository
     {
-        private  List<Student> students = new List<Student>();
+        private  List<Student> _students = new List<Student>();
 
-        public  void AddStudent(Student student)
+        public List<Student> Students => _students;
+
+        public void AddStudent(Student student)
         {
-            foreach (Student user in students)
+            foreach(Student student1 in _students)
             {
-                if (user.StudentName == student.StudentName && user.StudentPhoneNumber == student.StudentPhoneNumber
-                    && user.StudentEmail == student.StudentEmail)
-                    throw new Exception("Student Already Exist");
+                if (student1.StudentName.ToLower() == student.StudentName.ToLower())
+                    throw new Exception("This student has already in the student list.");
+                
             }
-
-            students.Add(student);
+            _students.Add(student);
         }
 
         public Student FindStudentByID(int id)
         {
             Student result = null;
-            foreach (Student student in students)
+            foreach (Student student in _students)
             {
                 if(student.StudentId == id)
                     result = student;

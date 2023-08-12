@@ -8,6 +8,8 @@ public partial class AddStudentPage : ContentPage
 	public AddStudentPage()
 	{
 		InitializeComponent();
+
+		
 	}
 
     private void AddStudent_Clicked(object sender, EventArgs e)
@@ -37,6 +39,6 @@ public partial class AddStudentPage : ContentPage
 
     private void OnViewStudents(System.Object sender, System.EventArgs e)
     {
-		Navigation.PushAsync(new StudentInfoUi(_studentRepository));
+		Navigation.PushAsync(new ViewAllStudentsPage(_studentRepository));
     }
 }
