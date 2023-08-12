@@ -41,4 +41,8 @@ public partial class AddStudentPage : ContentPage
     {
 		Navigation.PushAsync(new ViewAllStudentsPage(_studentRepository));
     }
+
+    void OnAddCourse(System.Object sender, System.EventArgs e)
+    {
+    }
 }
