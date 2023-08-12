@@ -7,9 +7,9 @@ namespace Interactive_Develpoment_Project.Logic
 	public enum CourseType
 	{
 		
-		Professional,
-		Elective,
-		Mandatory
+		professional,
+		elective,
+		mandatory
 	}
 }
 

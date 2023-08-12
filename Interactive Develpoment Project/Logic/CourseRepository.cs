@@ -16,12 +16,12 @@ namespace Interactive_Develpoment_Project.Logic
 			_courseList.Add(course);
 		}
 
-		public Course GetCourseById(int id)
+		public Course GetCourseById(string id)
 		{
 			foreach(Course course in _courseList)
 			{
                 //Arnav: changed from this if (course.CourseId == id)
-                if (course.CourseId.Equals(id))
+                if (course.CourseId.ToLower()==id.ToLower())
 					return course;
 			}
 			return null;

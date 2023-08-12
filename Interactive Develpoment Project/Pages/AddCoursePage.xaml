@@ -68,6 +68,61 @@
                 Style="{StaticResource CustomButtonStyle}"/>
         </HorizontalStackLayout>
 
+        <ListView
+            Margin="20"
+            x:Name="CourseListView"
+            ItemsSource="{Binding CourseRepository.Courses}"
+            SelectedItem="{Binding SelectedCourse,Mode=TwoWay}"
+            HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+
+
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                x:Name="CourseImage"
+                                HeightRequest="60"
+                                WidthRequest="60"
+                                Grid.RowSpan="2"
+                                Source="{Binding Image}"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding CourseId,StringFormat='CourseId:{0}'}"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1">
+                                <Label.Text>
+                                    <MultiBinding StringFormat="Course Name:{0}  Description:{1}">
+                                                  <Binding Path="CourseName"/>
+                                        <Binding Path="Description"/>
+                                        </MultiBinding>
+
+
+                                </Label.Text>
+
+                            </Label>
+
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
 
     </VerticalStackLayout>
     
