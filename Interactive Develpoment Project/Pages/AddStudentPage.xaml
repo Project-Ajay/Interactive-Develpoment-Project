@@ -48,45 +48,28 @@
                 x:Name="PasswordEntry"
                 Style="{StaticResource LeftAlignEntryStyle}"/>
 
-            <HorizontalStackLayout>
-                <Label
-                    Text="Is Domestic Student: "/>
-
-                <CheckBox
-                    x:Name="IsDomesticCheckBox"
-                    IsChecked="False" />
-       
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout>
-                <Label
-                Text="Register Student:"/>
-
-                <CheckBox
-                x:Name="IsRegisterCheckBox"
-                IsChecked="False"/>
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout>
-            <Button
-                x:Name="AddStudent"
-                Clicked="AddStudent_Clicked"
-                Text="Add Student"
-                Style="{StaticResource CustomButtonStyle}"/>
-
-                <Button
-                    x:Name="AddCourse"
-                    Clicked="OnAddCourse"
-                    Text="Add Course"/>
             
-            <Button
-                 Text="View Registered Students"
-                 Clicked="OnViewStudents"
-                 Style="{StaticResource CustomButtonStyle}"/>
 
+            <VerticalStackLayout>
+                <Button
+                    x:Name="AddStudent"
+                    Clicked="AddStudent_Clicked"
+                    Text="Add Student"
+                    Style="{StaticResource CustomButtonStyle}"/>
                 
-
-</HorizontalStackLayout>
+                    <Button
+                        x:Name="AddCourse"
+                        Clicked="OnAddCourse"
+                        Text="Add Course"/>
+                
+                <Button
+                     Text="View Registered Students"
+                     Clicked="OnViewStudents"
+                     Style="{StaticResource CustomButtonStyle}"/>
+                
+                    
+                
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
