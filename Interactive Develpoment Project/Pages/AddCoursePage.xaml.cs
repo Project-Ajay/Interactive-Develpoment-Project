@@ -5,50 +5,71 @@ namespace Interactive_Develpoment_Project.Pages;
 public partial class AddCoursePage : ContentPage
 {
 
-	private List<Course> _courses = new List<Course>();
+	private CourseRepository _courseRepository = new CourseRepository();
 
-	public AddCoursePage()
+    public CourseRepository CourseRepository => _courseRepository;
+
+    private Course _selectedCourse;
+
+    public Course SelectedCourse
+    {
+        get { return _selectedCourse; }
+        set
+        {
+            if (_selectedCourse == value) return;
+            _selectedCourse = value;
+            OnPropertyChanged();
+        }
+    }
+
+    //protected override void OnAppearing()
+    //{
+    //    base.OnAppearing();
+    //    CourseListView.ItemsSource = null;
+    //    CourseListView.ItemsSource = CourseRepository.Courses;
+    //}
+
+    public AddCoursePage()
 	{
 		InitializeComponent();
 		CourseTypePicker.ItemsSource = Enum.GetValues(typeof(CourseType));
+        //_courseRepository.AddCourse(new Course("ger", CourseType.elective, "fegr", "gegerg"));
+        //_courseRepository.AddCourse(new Course("fwfe", CourseType.elective, "grg", "grgr"));
+        this.BindingContext = this;
 	}
 
-    
-
-    private void OnDeleteCourse(System.Object sender, System.EventArgs e)
+    private void AddCourse_Clicked(System.Object sender, System.EventArgs e)
     {
-		try
-		{
-			//Arnav: Fixed errors here make sure everything is correct
-			string courseId = CourseIdEntry.Text;
-			CourseType courseType =(CourseType) CourseTypePicker.SelectedItem;
-			string courseName = CourseNameEntry.Text;
-			string description = CourseDescriptionEntry.Text;
+        try
+        {
+            //Arnav: Fixed errors here make sure everything is correct
+            string courseId = CourseIdEntry.Text;
+            CourseType courseType = (CourseType)CourseTypePicker.SelectedItem;
+            string courseName = CourseNameEntry.Text;
+            string description = CourseDescriptionEntry.Text;
 
-			Course course = new Course(courseId, courseType, courseName, description);
+            Course course = new Course(courseId, courseType, courseName, description);
 
-			DisplayAlert("New Course was Created", $"Course Id: {course.CourseId}\nCourse Name:{course.CourseName}\nDescription:{course.Description}", "Ok");
+            DisplayAlert("New Course was Created", $"Course Id: {course.CourseId}\nCourse Name:{course.CourseName}\nDescription:{course.Description}", "Ok");
 
-			_courses.Add(course);
-		}
-		catch(Exception ex)
-		{
-			DisplayAlert("Invalid Input", $"{ex.Message}", "Ok");
-		}
-    }
-
-    private void OnAddCourse(object sender, EventArgs e)
-    {
+            _courseRepository.AddCourse(course);
+            CourseListView.ItemsSource = null;
+            CourseListView.ItemsSource = _courseRepository.Courses;
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Invalid Input", $"{ex.Message}", "Ok");
+        }
 
     }
 
-    private void AddCourse_Clicked(object sender, EventArgs e)
+    private void DeleteCourse_Clicked(System.Object sender, System.EventArgs e)
     {
 
+        _courseRepository.Courses.Remove(SelectedCourse);
+        DisplayAlert("Information", $"The course with {SelectedCourse.CourseName} has been removed.", "Ok");
+        CourseListView.ItemsSource = null;
+        CourseListView.ItemsSource = CourseRepository.Courses;
     }
 
-    private void DeleteCourse_Clicked(object sender, EventArgs e)
-    {
-
-    }
 }

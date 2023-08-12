@@ -26,6 +26,14 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
+		public string Image
+		{
+
+			get { return $"{CourseType}.png"; }
+
+		}
+		
+
 		private string _courseName;
 		public string CourseName
 		{

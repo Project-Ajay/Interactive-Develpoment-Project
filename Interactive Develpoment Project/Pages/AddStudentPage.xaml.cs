@@ -3,11 +3,13 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class AddStudentPage : ContentPage
 {
-	private List<Student> _students = new List<Student>();
+	private StudentRepository _studentRepository = new StudentRepository();
 
 	public AddStudentPage()
 	{
 		InitializeComponent();
+
+		
 	}
 
     private void AddStudent_Clicked(object sender, EventArgs e)
@@ -26,7 +28,7 @@ public partial class AddStudentPage : ContentPage
 
 			DisplayAlert("New Student Registered", $"Name: {student.StudentName}\nStudent Id:{student.StudentId}", "Ok");
 
-			_students.Add(student);
+			_studentRepository.AddStudent(student);
 
 		}
 		catch(Exception ex)
@@ -37,6 +39,10 @@ public partial class AddStudentPage : ContentPage
 
     private void OnViewStudents(System.Object sender, System.EventArgs e)
     {
-		Navigation.PushAsync(new StudentInfoUi());
+		Navigation.PushAsync(new ViewAllStudentsPage(_studentRepository));
+    }
+
+    void OnAddCourse(System.Object sender, System.EventArgs e)
+    {
     }
 }

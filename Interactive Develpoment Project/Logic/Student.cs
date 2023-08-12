@@ -10,7 +10,9 @@ namespace Interactive_Develpoment_Project.Logic
 		private string _studentPhoneNumber;
 		private bool _isDomesticStudent;
 		private string _password;
-		private bool _isRegistered; 
+		private bool _isRegistered;
+
+		private List<Course> _selectedCourses = new List<Course>();
 
 		private static int _count = 0999;
 
@@ -134,6 +136,17 @@ namespace Interactive_Develpoment_Project.Logic
             return password.Any(char.IsDigit);
         }
 
+		public void AddCourse(Course course)
+		{
+			foreach(Course course1 in _selectedCourses)
+			{
+				if (course1.CourseId.ToLower() == course1.CourseId.ToLower())
+					throw new Exception("This course has already selected.");
+				_selectedCourses.Add(course);
+			}
+		}
+
+		public List<Course> SelectedCourses => _selectedCourses;
 
 
 
@@ -151,6 +164,10 @@ namespace Interactive_Develpoment_Project.Logic
 
 			 
 		}
+        public override string ToString()
+        {
+			return $"{StudentId},{StudentName}";
+        }
     }
 }
 

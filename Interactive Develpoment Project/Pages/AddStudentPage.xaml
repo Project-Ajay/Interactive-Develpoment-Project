@@ -73,11 +73,18 @@
                 Clicked="AddStudent_Clicked"
                 Text="Add Student"
                 Style="{StaticResource CustomButtonStyle}"/>
+
+                <Button
+                    x:Name="AddCourse"
+                    Clicked="OnAddCourse"
+                    Text="Add Course"/>
             
             <Button
                  Text="View Registered Students"
                  Clicked="OnViewStudents"
                  Style="{StaticResource CustomButtonStyle}"/>
+
+                
 
 </HorizontalStackLayout>
 
