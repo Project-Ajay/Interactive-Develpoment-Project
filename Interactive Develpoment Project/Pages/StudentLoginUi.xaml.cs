@@ -37,8 +37,8 @@ public partial class StudentLoginUi : ContentPage
         if (isStudentFound)
         {
 
-            StudentInfoUi studentInfoUi = new StudentInfoUi();
-            await Navigation.PushAsync(studentInfoUi);
+            //StudentInfoUi studentInfoUi = new StudentInfoUi();
+            //await Navigation.PushAsync(studentInfoUi);
         }
         else
         {

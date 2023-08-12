@@ -9,9 +9,9 @@ namespace Interactive_Develpoment_Project.Logic
 {
     public  class StudentRepository
     {
-        private static List<Student> students = new List<Student>();
+        private  List<Student> students = new List<Student>();
 
-        public static void AddStudent(Student student)
+        public  void AddStudent(Student student)
         {
             foreach (Student user in students)
             {

@@ -33,8 +33,8 @@ public partial class AddCoursePage : ContentPage
 	{
 		InitializeComponent();
 		CourseTypePicker.ItemsSource = Enum.GetValues(typeof(CourseType));
-        _courseRepository.AddCourse(new Course("ger", CourseType.elective, "fegr", "gegerg"));
-        _courseRepository.AddCourse(new Course("fwfe", CourseType.elective, "grg", "grgr"));
+        //_courseRepository.AddCourse(new Course("ger", CourseType.elective, "fegr", "gegerg"));
+        //_courseRepository.AddCourse(new Course("fwfe", CourseType.elective, "grg", "grgr"));
         this.BindingContext = this;
 	}
 

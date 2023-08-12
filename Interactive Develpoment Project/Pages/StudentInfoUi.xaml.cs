@@ -4,10 +4,12 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class StudentInfoUi : ContentPage
 {
-
-	public StudentInfoUi()
+	private StudentRepository _studentRepository;
+	public StudentInfoUi(StudentRepository studentRepository)
 	{
 		InitializeComponent();
+		_studentRepository = studentRepository;
+
 		
 	}
 
