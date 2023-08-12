@@ -19,7 +19,8 @@ public partial class AddStudentPage : ContentPage
 			string studentPhoneNumber = PhoneNumberEntry.Text;
 			string studentPassword = PasswordEntry.Text;
 			DateOnly BirthDate = DateOnly.FromDateTime(BirthDatePicker.Date);
-
+			bool isDomesticStudent = IsDomesticCheckBox.IsChecked;
+			bool isReqistered = IsRegisterCheckBox.IsChecked;
 
 			Student student = new Student(studentName, studentEmail, BirthDate, studentPhoneNumber, studentPassword);
 

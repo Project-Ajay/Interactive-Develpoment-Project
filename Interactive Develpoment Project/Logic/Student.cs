@@ -8,6 +8,7 @@ namespace Interactive_Develpoment_Project.Logic
 		private int _studentId;
         private DateOnly _dateOfBirth;
 		private string _studentPhoneNumber;
+		private bool _isDomesticStudent;
 		private string _password;
 		private bool _isRegistered; 
 
@@ -89,7 +90,18 @@ namespace Interactive_Develpoment_Project.Logic
 			}
 		}
 
-
+		//Registed
+        public bool IsRegistered
+        {
+            get
+            {
+                return _isRegistered;
+            }
+            set
+            {
+                _isRegistered = value;
+            }
+        }
 
         //Student Password
 
