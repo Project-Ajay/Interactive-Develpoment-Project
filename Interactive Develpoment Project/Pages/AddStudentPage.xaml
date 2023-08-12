@@ -48,38 +48,22 @@
                 x:Name="PasswordEntry"
                 Style="{StaticResource LeftAlignEntryStyle}"/>
 
-            <HorizontalStackLayout>
-                <Label
-                    Text="Is Domestic Student: "/>
 
-                <CheckBox
-                    x:Name="IsDomesticCheckBox"
-                    IsChecked="False" />
-       
-            </HorizontalStackLayout>
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Button
+                    x:Name="AddStudent"
+                    Clicked="AddStudent_Clicked"
+                    Text="Add Student"
+                    Style="{StaticResource CustomButtonStyle}"
+                    WidthRequest="300"/>
+                
+                <Button
+                     Text="View Registered Students"
+                     Clicked="OnViewStudents"
+                     Style="{StaticResource CustomButtonStyle}"
+                    WidthRequest="300"/>
 
-            <HorizontalStackLayout>
-                <Label
-                Text="Register Student:"/>
-
-                <CheckBox
-                x:Name="IsRegisterCheckBox"
-                IsChecked="False"/>
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout>
-            <Button
-                x:Name="AddStudent"
-                Clicked="AddStudent_Clicked"
-                Text="Add Student"
-                Style="{StaticResource CustomButtonStyle}"/>
-            
-            <Button
-                 Text="View Registered Students"
-                 Clicked="OnViewStudents"
-                 Style="{StaticResource CustomButtonStyle}"/>
-
-</HorizontalStackLayout>
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
