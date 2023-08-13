@@ -30,6 +30,12 @@
                 x:Name="StudentLoginButton" Clicked="StudentLoginButton_Clicked"
                 Text="Login"
                 Style="{StaticResource CustomButtonStyle}"/>
+
+            <Button
+                x:Name="BackToLanding"
+                Clicked="BackToLanding_Clicked"
+                Text="Back To Landing Page"
+                Style="{StaticResource CustomButtonStyle}"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

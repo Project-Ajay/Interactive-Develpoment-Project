@@ -73,6 +73,10 @@ public partial class StudentLoginUi : ContentPage
         
     }
 
-    
+    private async void BackToLanding_Clicked(object sender, EventArgs e)
+    {
+
+        await Navigation.PopToRootAsync();
+    }
 }
 
