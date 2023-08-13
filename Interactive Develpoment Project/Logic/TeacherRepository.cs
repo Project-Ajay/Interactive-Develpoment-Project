@@ -1,4 +1,5 @@
 ﻿using System;
+using Interactive_Develpoment_Project.DataAccess;
 namespace Interactive_Develpoment_Project.Logic
 {
 	public class TeacherRepository
@@ -55,6 +56,24 @@ namespace Interactive_Develpoment_Project.Logic
             }
             return null;
         }
+
+        public void SaveTeachers(IDataManager dataManager)
+        {
+            dataManager.WriteTeachers(_teachers);
+        }
+
+        public void ReadTeachers(IDataManager dataManager)
+        {
+            try
+            {
+                _teachers = dataManager.LoadTeachers();
+            }
+            catch(FileNotFoundException ex)
+            {
+                _teachers = new List<Teacher>();
+            }
+        }
+
 
     }
 }

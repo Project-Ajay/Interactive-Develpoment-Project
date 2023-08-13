@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Interactive_Develpoment_Project.DataAccess;
 
 namespace Interactive_Develpoment_Project.Logic
 {
@@ -36,7 +37,21 @@ namespace Interactive_Develpoment_Project.Logic
         }
 
         //Arnav: added "temp" to remove the error
-        public void ReadData(IDataManager temp)
-        { }
+       public void SaveStudents(IDataManager dataManager)
+        {
+            dataManager.WriteStudents(_students);
+        }
+
+        public void ReadStudents(IDataManager dataManager)
+        {
+            try
+            {
+                _students = dataManager.LoadStudents();
+            }
+            catch(FileNotFoundException ex)
+            {
+                _students = new List<Student>();
+            }
+        }
     }
 }

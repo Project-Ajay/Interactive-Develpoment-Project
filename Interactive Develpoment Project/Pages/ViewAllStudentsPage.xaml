@@ -11,6 +11,8 @@
             FontSize="Title"/>
 
         <ListView
+            HeightRequest="600"
+            WidthRequest="600"
             Margin="20"
             x:Name="StudentsListView"
             ItemsSource="{Binding StudentRepository.Students}"
@@ -33,5 +35,9 @@
 
             </ListView.ItemTemplate>
         </ListView>
+        <Button
+            Text="Back To Admin"
+            Clicked="BackToAdmin"
+            Style="{StaticResource CustomButtonStyle}"/>
     </VerticalStackLayout>
 </ContentPage>

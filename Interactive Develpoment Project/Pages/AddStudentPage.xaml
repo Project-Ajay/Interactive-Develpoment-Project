@@ -50,7 +50,7 @@
 
             
 
-            <VerticalStackLayout>
+            <HorizontalStackLayout>
                 <Button
                     x:Name="AddStudent"
                     Clicked="AddStudent_Clicked"
@@ -60,7 +60,8 @@
                     <Button
                         x:Name="AddCourse"
                         Clicked="OnAddCourse"
-                        Text="Add Course"/>
+                        Text="Add Course"
+                        Style="{StaticResource CustomButtonStyle}"/>
                 
                 <Button
                      Text="View Registered Students"
@@ -69,7 +70,7 @@
                 
                     
                 
-            </VerticalStackLayout>
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>

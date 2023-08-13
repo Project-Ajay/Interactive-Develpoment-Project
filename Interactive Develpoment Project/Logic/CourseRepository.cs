@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interactive_Develpoment_Project.DataAccess;
+using System;
 namespace Interactive_Develpoment_Project.Logic
 {
 	public  class CourseRepository
@@ -42,6 +43,23 @@ namespace Interactive_Develpoment_Project.Logic
 
 		//read only property to read all course in list
 		public  List<Course> Courses => _courseList;
+
+		public void SaveCourses(IDataManager dataManager)
+		{
+			dataManager.WriteCourses(Courses);
+		}
+
+		public void ReadCourses(IDataManager dataManager)
+		{
+			try
+			{
+				_courseList = dataManager.LoadCourses();
+			}
+			catch(FileNotFoundException ex)
+			{
+				_courseList = new List<Course>();
+			}
+		}
 	}
 }
 

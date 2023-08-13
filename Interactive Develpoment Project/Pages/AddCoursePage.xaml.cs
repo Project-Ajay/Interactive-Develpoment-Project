@@ -1,4 +1,5 @@
 ﻿using Interactive_Develpoment_Project.Logic;
+using Interactive_Develpoment_Project.DataAccess;
 
 namespace Interactive_Develpoment_Project.Pages;
 
@@ -29,12 +30,20 @@ public partial class AddCoursePage : ContentPage
     //    CourseListView.ItemsSource = CourseRepository.Courses;
     //}
 
+    string _fileName = "project.json";
+
+    IDataManager _dataManager;
+
     public AddCoursePage()
 	{
 		InitializeComponent();
 		CourseTypePicker.ItemsSource = Enum.GetValues(typeof(CourseType));
         //_courseRepository.AddCourse(new Course("ger", CourseType.elective, "fegr", "gegerg"));
         //_courseRepository.AddCourse(new Course("fwfe", CourseType.elective, "grg", "grgr"));
+
+        string filePath = Path.Combine(FileSystem.Current.AppDataDirectory, _fileName);
+        _dataManager = new DataJsonManager(filePath);
+
         this.BindingContext = this;
 	}
 
@@ -55,6 +64,7 @@ public partial class AddCoursePage : ContentPage
             _courseRepository.AddCourse(course);
             CourseListView.ItemsSource = null;
             CourseListView.ItemsSource = _courseRepository.Courses;
+            _courseRepository.SaveCourses(_dataManager);
         }
         catch (Exception ex)
         {
