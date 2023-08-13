@@ -17,9 +17,6 @@ public partial class AddTeacherPage : ContentPage
 
         _teacherRepository = TeacherRepository.Repository;
 
-        //For Testing
-        
-
         string filePath = Path.Combine(FileSystem.Current.AppDataDirectory, _fileName);
 
         _dataManager = new DataJsonManager(filePath);
