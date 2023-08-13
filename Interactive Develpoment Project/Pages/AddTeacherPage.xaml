@@ -11,7 +11,8 @@
                    Margin="10" />
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="Name" />
+                <Label Text="Name" 
+                       Style="{StaticResource LargerEntryLabel}"/>
                 <HorizontalStackLayout Spacing="15">
                     <Entry x:Name="firstNameEntry"
                            Placeholder="First Name"
@@ -25,27 +26,31 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="Email" />
+                <Label Text="Email" 
+                       Style="{StaticResource LargerEntryLabel}"/>
                 <Entry x:Name="emailEntry"
                        Placeholder="abc@email.com"
                        Style="{StaticResource Key=TeacherLoginEntry}" />
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="Phone Number" />
+                <Label Text="Phone Number"
+                       Style="{StaticResource LargerEntryLabel}"/>
                 <Entry x:Name="phoneEntry"
                        Placeholder="123 567 8900"
                        Style="{StaticResource Key=TeacherLoginEntry}" />
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="Date of Birth" />
+                <Label Text="Date of Birth"
+                       Style="{StaticResource LargerEntryLabel}"/>
                 <DatePicker x:Name="dateofbirthEntry"
                             Style="{StaticResource Key=TeacherLoginEntry}" />
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="5">
-                <Label Text="Password" />
+                <Label Text="Password"
+                       Style="{StaticResource LargerEntryLabel}"/>
                 <Entry x:Name="passwordEntry"
                        Placeholder="Must have 8 at least characters"
                        Style="{StaticResource Key=TeacherLoginEntry}" />
@@ -54,24 +59,28 @@
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
                 <Button x:Name="AddTeacherBtn"
                         Text="Add Teacher"
-                        WidthRequest="150"
                         Margin="0,20"
-                        Clicked="AddTeacherBtn_Clicked" />
-
-                <Button
-                    x:Name="BackBtn"
-                    Text="Back"
-                    WidthRequest="100"
-                    Margin="0, 20"
-                    Clicked="BackBtn_Clicked"
-                    />
+                        Clicked="AddTeacherBtn_Clicked"
+                        Style="{StaticResource CustomButtonStyle}"/>
 
                 <Button x:Name="ViewTeachersBtn"
                         Text="View Teachers"
-                        WidthRequest="150"
+
                         Margin="0,20"
-                        Clicked="ViewTeachersBtn_Clicked" />
+                        Clicked="ViewTeachersBtn_Clicked"
+                        Style="{StaticResource CustomButtonStyle}"/>
+
             </HorizontalStackLayout>
+
+
+            <Button
+                    x:Name="BackBtn"
+                    Text="Back" TextColor="Red"
+                    WidthRequest="300"
+                    Clicked="BackBtn_Clicked"
+                    Style="{StaticResource CustomButtonStyle}"
+                    />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

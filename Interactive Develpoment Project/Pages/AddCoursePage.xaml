@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.AddCoursePage"
-             Title="AddCoursePage">
+             Title="AddCoursePage"
+             Background="powderblue">
 
     <VerticalStackLayout Spacing="40" HorizontalOptions="Center">
 
@@ -48,7 +49,7 @@
                 Text="Course Type"
                 Style="{StaticResource LargerEntryLabel}"/>
 
-            <Picker
+            <Picker 
                 x:Name="CourseTypePicker"
                 WidthRequest="250"
                 BackgroundColor="White"/>
@@ -67,12 +68,14 @@
                 Clicked="DeleteCourse_Clicked"
                 Style="{StaticResource CustomButtonStyle}"/>
 
-            <Button
-                x:Name="BackToAdminButtion"
-                Text="Back To AdminPage"
+        </HorizontalStackLayout>
+
+
+        <Button
+                x:Name="BackToAdminButtion" WidthRequest="250"
+                Text="Back To Admin Page" TextColor="Red"
                 Clicked="BackToAdmin"
                 Style="{StaticResource CustomButtonStyle}"/>
-        </HorizontalStackLayout>
 
         <ListView
             Margin="20"

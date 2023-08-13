@@ -5,7 +5,7 @@
              Title="AdminUI">
     <VerticalStackLayout>
         <Label 
-            Text="Admin"
+            Text="Administration Center"
             Style="{StaticResource HeaderLabelStyle}"/>
         <Image
             x:Name="AdminPageImage"

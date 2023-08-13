@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.AddStudentPage"
-             Title="AddStudentPage">
+             Title="AddStudentPage"
+             Background="powderblue">
     <ScrollView>
         <VerticalStackLayout HorizontalOptions="Center">
 
