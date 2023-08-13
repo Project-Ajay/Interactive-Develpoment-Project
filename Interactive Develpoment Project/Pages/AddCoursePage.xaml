@@ -11,7 +11,7 @@
             Style="{StaticResource HeaderLabelStyle}"/>
 
         <HorizontalStackLayout Spacing="45">
-            <Label VerticalTextAlignment="Center" 
+            <Label VerticalTextAlignment="Center" Margin="20"
                 Text="Course ID"
                 Style="{StaticResource LargerEntryLabel}"/>
             <Entry 
@@ -22,7 +22,7 @@
         </HorizontalStackLayout>
 
         <HorizontalStackLayout Spacing="20">
-            <Label VerticalTextAlignment="Center" 
+            <Label VerticalTextAlignment="Center" Margin="20"
                 Text="Course Name"
                    Style="{StaticResource LargerEntryLabel}"/>
             <Entry 
@@ -33,7 +33,7 @@
         </HorizontalStackLayout>
 
         <HorizontalStackLayout Spacing="35">
-            <Label VerticalTextAlignment="Center" 
+            <Label VerticalTextAlignment="Center" Margin="20"
                 Text="Description"
                    Style="{StaticResource LargerEntryLabel}"/>
             <Entry 
@@ -44,7 +44,7 @@
 
         <HorizontalStackLayout Spacing="30">
             <Label
-                VerticalTextAlignment="Center"
+                VerticalTextAlignment="Center" Margin="20"
                 Text="Course Type"
                 Style="{StaticResource LargerEntryLabel}"/>
 
@@ -65,6 +65,12 @@
                 x:Name="DeleteCourse"
                 Text="Delete Course"
                 Clicked="DeleteCourse_Clicked"
+                Style="{StaticResource CustomButtonStyle}"/>
+
+            <Button
+                x:Name="BackToAdminButtion"
+                Text="Back To AdminPage"
+                Clicked="BackToAdmin"
                 Style="{StaticResource CustomButtonStyle}"/>
         </HorizontalStackLayout>
 

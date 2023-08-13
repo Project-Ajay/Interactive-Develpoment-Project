@@ -72,4 +72,8 @@ public partial class AddCoursePage : ContentPage
         CourseListView.ItemsSource = CourseRepository.Courses;
     }
 
+    void BackToAdmin(System.Object sender, System.EventArgs e)
+    {
+        Navigation.PushAsync(new AdminUI());
+    }
 }

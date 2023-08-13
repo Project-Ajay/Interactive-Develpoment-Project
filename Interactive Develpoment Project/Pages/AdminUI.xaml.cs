@@ -19,6 +19,7 @@ public partial class AdminUI : ContentPage
 
     private void OnRegisterCourse(System.Object sender, System.EventArgs e)
     {
+        Navigation.PushAsync(new AddCoursePage());
     }
 
     private void OnRegisterTeacher(object sender, EventArgs e)

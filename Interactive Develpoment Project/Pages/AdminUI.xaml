@@ -9,8 +9,8 @@
             Style="{StaticResource HeaderLabelStyle}"/>
         <Image
             x:Name="AdminPageImage"
-            HeightRequest="300"
-            WidthRequest="300"/>
+            HeightRequest="600"
+            WidthRequest="600"/>
 
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="13">
 
