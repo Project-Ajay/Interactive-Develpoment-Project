@@ -4,8 +4,8 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class StudentInfoPage : ContentPage
 {
-	private StudentRepository _studentRepository;
-	public StudentInfoPage(StudentRepository studentRepository)
+	//private StudentRepository _studentRepository;
+	public StudentInfoPage()
 	{
 		InitializeComponent();
 	}

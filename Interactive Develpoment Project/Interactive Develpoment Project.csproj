@@ -102,4 +102,9 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\admin.png" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Pages\TeacherLoginUI.xaml.cs">
+	    <DependentUpon>TeacherLoginUI.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
 </Project>
