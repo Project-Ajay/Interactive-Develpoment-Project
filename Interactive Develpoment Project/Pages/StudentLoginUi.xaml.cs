@@ -4,6 +4,16 @@ using Logic;
 public partial class StudentLoginUi : ContentPage
 {
     StudentRepository _studentRepository = new StudentRepository();
+
+    public StudentRepository StudentRepository
+    {
+        get
+        { 
+            return _studentRepository;
+        }
+    }
+
+
     Student _selectedStudent;
 
     public Student SelectedStudent
@@ -23,18 +33,17 @@ public partial class StudentLoginUi : ContentPage
 
 
     //Initialize the list of students (HARD CODED FOR TESTING)
-    private List<Student> students = new List<Student>
-    {
-        new Student("John Doe", "johndoe@gmail.com", new DateOnly(2002, 5, 15), "+1 (555) 555-5555", "Pass1234"),
-        new Student("Jane Smith", "janesmith@icloud.com", new DateOnly(2001, 10, 22), "+1 (555) 666-7777", "IcloudPwd1"),
-        new Student("Michael Johnson", "michaeljohnson@gmail.com", new DateOnly(2003, 12, 5), "+1 (555) 444-3333", "P@ssw0rd123")
-
-    };
+    private List<Student> students = new List<Student>();
     
     public StudentLoginUi()
 	{
 		InitializeComponent();
+        students.Add(new Student("John Doe", "johndoe@gmail.com", new DateOnly(2002, 5, 15), "+1 (555) 555-5555", "Pass1234"));
+        students.Add(new Student("Jane Smith", "janesmith@icloud.com", new DateOnly(2001, 10, 22), "+1 (555) 666-7777", "IcloudPwd1"));
+        students.Add(new Student("Michael Johnson", "michaeljohnson@gmail.com", new DateOnly(2003, 12, 5), "+1 (555) 444-3333", "P@ssw0rd123"));
 
+        BindingContext = this;
+ 
     }
 
     private async void StudentLoginButton_Clicked(object sender, EventArgs e)
