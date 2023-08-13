@@ -48,6 +48,15 @@
                 x:Name="PasswordEntry"
                 Style="{StaticResource LeftAlignEntryStyle}"/>
 
+            <Label
+                Text="Courses displayed in a picker"/>
+
+            <Picker
+                x:Name="CoursesPicker"
+                ItemsSource="{Binding CourseRepository.Courses}"
+                ItemDisplayBinding="{Binding CourseName}"
+                SelectedIndexChanged="OnCourseSelectionChanged"/>
+
             
 
             <HorizontalStackLayout>
@@ -57,11 +66,7 @@
                     Text="Add Student"
                     Style="{StaticResource CustomButtonStyle}"/>
                 
-                    <Button
-                        x:Name="AddCourse"
-                        Clicked="OnAddCourse"
-                        Text="Add Course"
-                        Style="{StaticResource CustomButtonStyle}"/>
+                   
                 
                 <Button
                      Text="View Registered Students"

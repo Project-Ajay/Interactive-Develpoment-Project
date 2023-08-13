@@ -10,12 +10,21 @@ public partial class AddStudentPage : ContentPage
 
 	IDataManager _dataManager;
 
+	CourseRepository _courseRepository;
+
+	public CourseRepository CourseRepository => _courseRepository;
+
+
+
 	public AddStudentPage()
 	{
 		InitializeComponent();
 		string filePath = Path.Combine(FileSystem.Current.AppDataDirectory, _fileName);
 		_dataManager = new DataJsonManager(filePath);
 
+		_courseRepository.ReadCourses(_dataManager);
+
+		//CoursesPicker.ItemsSource=List<Course>.Enumerator(List)
 		
 	}
 
