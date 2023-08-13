@@ -12,20 +12,26 @@
 
             <Label
                 Text="Student Name"
+                Style="{StaticResource LargerEntryLabel}"
                 />
             <Entry
                 Placeholder="Name"
                 x:Name="StudentNameEnty"
                 Style="{StaticResource LeftAlignEntryStyle}"/>
-            <Label
-                Text="Date of Birth: "/>
 
-            <DatePicker
-                x:Name="BirthDatePicker"/>
-            
+            <HorizontalStackLayout Spacing="40">
+                <Label VerticalOptions="Center"
+                    Text="Date of Birth: "
+                    Style="{StaticResource LargerEntryLabel}"/>
+
+                <DatePicker
+                    x:Name="BirthDatePicker"/>
+
+            </HorizontalStackLayout>
+
             <Label
                 Text="Email"
-                />
+                Style="{StaticResource LargerEntryLabel}"/>
             
             <Entry
                 Placeholder="Email e.g abced@gmail.com"
@@ -34,7 +40,7 @@
 
             <Label
                 Text="Phone Number"
-                />
+                Style="{StaticResource LargerEntryLabel}"/>
             <Entry
                 Placeholder="Phone Number e.g90876543"
                 x:Name="PhoneNumberEntry"
@@ -42,28 +48,32 @@
 
             <Label
                 Text="Password"
-                />
+                Style="{StaticResource LargerEntryLabel}"/>
             <Entry
                 Placeholder="Password e.g passWord123"
                 x:Name="PasswordEntry"
                 Style="{StaticResource LeftAlignEntryStyle}"/>
 
-            <Label
-                Text="Courses displayed in a picker"/>
+            <HorizontalStackLayout Spacing="25" VerticalOptions="Center">
+                <Label
+                    VerticalOptions="Center"
+                    Text="Courses displayed in a picker"
+                    Style="{StaticResource LargerEntryLabel}"/>
 
-            <Picker
-                x:Name="CoursesPicker"
-                ItemsSource="{Binding CourseRepository.Courses}"
-                ItemDisplayBinding="{Binding CourseName}"
-                SelectedIndexChanged="OnCourseSelectionChanged"/>
+                <Picker
+                    x:Name="CoursesPicker"
+                    ItemsSource="{Binding CourseRepository.Courses}"
+                    ItemDisplayBinding="{Binding CourseName}"
+                    SelectedIndexChanged="OnCourseSelectionChanged"/>
+            </HorizontalStackLayout>
 
-            
 
-            <HorizontalStackLayout>
+
+            <VerticalStackLayout Padding="40" Spacing="10">
                 <Button
                     x:Name="AddStudent"
                     Clicked="AddStudent_Clicked"
-                    Text="Add Student"
+                    Text="Add Student" WidthRequest="350"
                     Style="{StaticResource CustomButtonStyle}"/>
                 
                    
@@ -71,11 +81,12 @@
                 <Button
                      Text="View Registered Students"
                      Clicked="OnViewStudents"
-                     Style="{StaticResource CustomButtonStyle}"/>
+                     Style="{StaticResource CustomButtonStyle}"
+                    WidthRequest="350"/>
                 
                     
                 
-            </HorizontalStackLayout>
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
