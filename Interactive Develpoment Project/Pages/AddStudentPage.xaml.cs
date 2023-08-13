@@ -22,7 +22,7 @@ public partial class AddStudentPage : ContentPage
 		string filePath = Path.Combine(FileSystem.Current.AppDataDirectory, _fileName);
 		_dataManager = new DataJsonManager(filePath);
 
-		_courseRepository.ReadCourses(_dataManager);
+		//_courseRepository.ReadCourses(_dataManager);
 
 		//CoursesPicker.ItemsSource=List<Course>.Enumerator(List)
 		

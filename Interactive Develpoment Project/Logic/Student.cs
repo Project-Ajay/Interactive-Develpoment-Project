@@ -144,6 +144,8 @@ namespace Interactive_Develpoment_Project.Logic
 			StudentPhoneNumber = studentPhoneNumber;
 			Password = password;
 			DateOfBirth = dateOfBirth;
+			_studentId = _count++;
+
 	
 
 			 
