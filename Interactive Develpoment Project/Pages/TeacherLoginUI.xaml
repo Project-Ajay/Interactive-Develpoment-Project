@@ -48,6 +48,13 @@
                 Style="{StaticResource CustomButtonStyle}"
                 Text="Login"/>
 
+            <Button
+                x:Name="BackButton"
+                Clicked="BackButton_Clicked"
+                Style="{StaticResource CustomButtonStyle}"
+                Text="Back"
+                />
+
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

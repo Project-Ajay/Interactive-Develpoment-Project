@@ -5,7 +5,7 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class AddTeacherPage : ContentPage
 {
-    private TeacherRepository _repository = new TeacherRepository();
+    private TeacherRepository _teacherRepository = new TeacherRepository();
 
     string _fileName = "project.json";
 
@@ -15,10 +15,11 @@ public partial class AddTeacherPage : ContentPage
 	{
 		InitializeComponent();
 
+        _teacherRepository = TeacherRepository.Repository;
+
         //For Testing
-        _repository.CreateTeacher(new Teacher("John", "Doe", "jdoe@gmail.com", "192802930", new DateOnly(2000, 11, 10), "Password123"));
-        _repository.CreateTeacher(new Teacher("Tim", "Baker", "Timmy@gmail.com", "27498232930", new DateOnly(1982, 12, 30), "TimBaker123"));
-        _repository.CreateTeacher(new Teacher("bob", "builder", "bob@gmail.com", "2340321928", new DateOnly(2003, 03, 01), "Bobbby123"));
+        
+
         string filePath = Path.Combine(FileSystem.Current.AppDataDirectory, _fileName);
 
         _dataManager = new DataJsonManager(filePath);
@@ -36,9 +37,9 @@ public partial class AddTeacherPage : ContentPage
             string password = passwordEntry.Text;
 
             Teacher teacher = new Teacher(firstname, lastname, email, phone, dob, password);
-            _repository.CreateTeacher(teacher);
+            _teacherRepository.CreateTeacher(teacher);
 
-            _repository.SaveTeachers(_dataManager);
+            _teacherRepository.SaveTeachers(_dataManager);
 
             await DisplayAlert("Teacher Created", $"Log in details\n\nLogin ID: {teacher.TeacherId}\nPassword: {teacher.Password}", "Ok");
 
@@ -57,7 +58,7 @@ public partial class AddTeacherPage : ContentPage
 
     private async void ViewTeachersBtn_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new ViewTeachersPage(_repository));
+        await Navigation.PushAsync(new ViewTeachersPage());
     }
 
     private async void BackBtn_Clicked(object sender, EventArgs e)

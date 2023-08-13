@@ -18,14 +18,12 @@
                                             />
                                         <Label
                                             Text="{Binding TeacherFirstName}"
-                                            HorizontalOptions="StartAndExpand"
                                             />
                                         <Label
-                                            Text=" "
+                                            Text=" "
                                             />
                                         <Label
                                             Text="{Binding TeacherLastName}"
-                                            HorizontalOptions="StartAndExpand"
                                             />
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout>

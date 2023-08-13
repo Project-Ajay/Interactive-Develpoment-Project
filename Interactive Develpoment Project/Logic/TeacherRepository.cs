@@ -4,6 +4,18 @@ namespace Interactive_Develpoment_Project.Logic
 {
 	public class TeacherRepository
 	{
+        // making a static teacher repository to use it globally
+        private static TeacherRepository _teacherRepository = new TeacherRepository();
+
+        //public read-only property to access the teacher repository
+        public static TeacherRepository Repository
+        {
+            get
+            {
+                return _teacherRepository;
+            }
+        }
+
         // List of all the teacher that will be in the database
         private List<Teacher> _teachers = new List<Teacher>();
 
