@@ -25,12 +25,12 @@ namespace Interactive_Develpoment_Project.Logic
             _students.Add(student);
         }
 
-        public Student FindStudentByID(int id)
+        public Student FindStudentByID(string id)
         {
             Student result = null;
             foreach (Student student in _students)
             {
-                if(student.StudentId == id)
+                if(student.StudentId.ToString() == id)
                     result = student;
             }
             return result;

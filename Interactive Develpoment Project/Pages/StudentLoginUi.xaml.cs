@@ -53,31 +53,26 @@ public partial class StudentLoginUi : ContentPage
 		string studentId = StudentIDEntry.Text;
 		string studentPassword = StudentPasswordEntry.Text;
 
-        bool isStudentFound = false;
+        Student student = _studentRepository.FindStudentByID(studentId);
 
-        foreach (Student student in students)
+        if (student != null && student.Password == studentPassword)
         {
-
-            if (student.StudentId.ToString() == studentId && student.Password == studentPassword)
-            {
-                isStudentFound = true;
-            }
-        }
-        if (isStudentFound)
-        {
-
+            await DisplayAlert("Login Successful", $"Welcome {student.StudentName}", "OK");
             StudentInfoPage studentInfo = new StudentInfoPage();
             await Navigation.PushAsync(studentInfo);
+
         }
         else
         {
             await DisplayAlert("Error", "Invalid student ID or password. Please try again.", "OK");
             StudentIDEntry.Text = "";
             StudentPasswordEntry.Text = "";
-
         }
+
+
         
     }
 
     
 }
+
