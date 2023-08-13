@@ -2,15 +2,11 @@ using Interactive_Develpoment_Project.Logic;
 
 namespace Interactive_Develpoment_Project.Pages;
 
-public partial class StudentInfoUi : ContentPage
+public partial class StudentInfoPage : ContentPage
 {
 	private StudentRepository _studentRepository;
-	public StudentInfoUi(StudentRepository studentRepository)
+	public StudentInfoPage(StudentRepository studentRepository)
 	{
 		InitializeComponent();
-		_studentRepository = studentRepository;
-
-		
 	}
-
 }
