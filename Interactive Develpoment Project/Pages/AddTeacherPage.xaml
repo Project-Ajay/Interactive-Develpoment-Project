@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.AddTeacherPage"
@@ -6,7 +6,7 @@
              Background="powderblue">
     <ScrollView>
         <VerticalStackLayout HorizontalOptions="Center" Spacing="30">
-            <Label Text="Add Student"
+            <Label Text="Add Teacher"
                    Style="{StaticResource HeaderLabelStyle}"
                    Margin="10" />
 

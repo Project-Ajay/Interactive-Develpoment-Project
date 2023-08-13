@@ -60,4 +60,8 @@ public partial class AddStudentPage : ContentPage
     void OnAddCourse(System.Object sender, System.EventArgs e)
     {
     }
+
+    void OnCourseSelectionChanged(System.Object sender, System.EventArgs e)
+    {
+    }
 }
