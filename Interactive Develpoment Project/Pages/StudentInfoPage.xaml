@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Interactive_Develpoment_Project.Pages.StudentInfoPage"
-             Title="StudentInfoPage">
+             Title="StudentInfoPage"
+             Background="powderblue">
     <VerticalStackLayout >
         <Label
             Text="Studnet Details"
@@ -16,7 +17,7 @@
 
             <Label FontSize="25" FontAttributes="Italic"
                 Grid.Row="0" Grid.Column="1"
-                Text="{Binding StudentId}"/>
+                Text="{Binding StudentRepository.StudentId}"/>
 
         </Grid>
 
@@ -28,28 +29,35 @@
 
             <Label 
                 Grid.Row="1" Grid.Column="0" FontAttributes="Italic"
-                Text="{Binding StudentName}"/>
+                Text="{Binding StudentRepository.StudentName}"/>
 
             <Label
                 Grid.Row="0" Grid.Column="1" FontSize="21"
                 Text="Date Of Birth"/>
             <Label
                 Grid.Row="1" Grid.Column="1" FontAttributes="Italic"
-                Text="{Binding DateOfBirth}"/>
+                Text="{Binding StudentRepository.DateOfBirth}"/>
 
             <Label
                 Grid.Row="0" Grid.Column="2" FontSize="21"
                 Text="Email"/>
             <Label
                 Grid.Row="1" Grid.Column="2" FontAttributes="Italic"
-                Text="{Binding Email}"/>
+                Text="{Binding StudentRepository.Email}"/>
 
             <Label
                 Grid.Row="0" Grid.Column="3" FontSize="21"
                 Text="Phone Number"/>
             <Label
                 Grid.Row="1" Grid.Column="3" FontAttributes="Italic"
-                Text="{Binding PhoneNumber}"/>
+                Text="{Binding StudentRepository.PhoneNumber}"/>
+
+            <Button
+                x:Name="BackToLanding"
+                Text="Back To Landing Page"
+                Clicked="BackToLanding_Clicked"
+                HorizontalOptions="Center"
+                Style="{StaticResource CustomButtonStyle}"/>
 
 
         </Grid>

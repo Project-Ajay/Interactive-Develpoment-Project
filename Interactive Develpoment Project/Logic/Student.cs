@@ -146,8 +146,6 @@ namespace Interactive_Develpoment_Project.Logic
 			DateOfBirth = dateOfBirth;
 			_studentId = _count++;
 
-	
-
 			 
 		}
         public override string ToString()

@@ -9,4 +9,9 @@ public partial class StudentInfoPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void BackToLanding_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
