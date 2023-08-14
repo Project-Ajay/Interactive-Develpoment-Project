@@ -33,5 +33,12 @@
 
         </HorizontalStackLayout>
 
+        <Button
+            Text="Back"
+            Clicked="BackButton_Clicked"
+            Style="{StaticResource CustomButtonStyle}"
+            Margin="0,50"
+            />
+
     </VerticalStackLayout>
 </ContentPage>

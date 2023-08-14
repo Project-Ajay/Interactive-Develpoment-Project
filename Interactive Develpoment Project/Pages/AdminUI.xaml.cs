@@ -28,4 +28,9 @@ public partial class AdminUI : ContentPage
         AddTeacherPage addTeacherPage = new AddTeacherPage();
         Navigation.PushAsync(addTeacherPage);
     }
+
+    private void BackButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
 }

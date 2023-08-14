@@ -12,6 +12,10 @@ namespace Interactive_Develpoment_Project.Logic
 			get { return _dueDate; }
 			set
 			{
+				if (_dueDate < base.DateCreated)
+				{
+					throw new ArgumentException("Due date has to be set after creation date");
+				}
 				_dueDate = value;
 			}
 		}
