@@ -4,11 +4,13 @@ namespace Interactive_Develpoment_Project.Pages;
 
 public partial class TeacherLoginUI : ContentPage
 {
-    private TeacherRepository _teacherRepository;
+    private TeacherRepository _teacherRepository = new TeacherRepository();
 
     public TeacherLoginUI()
     {
         InitializeComponent();
+
+        _teacherRepository = TeacherRepository.Repository;
     }
 
     private async void TeacherLoginButton_Clicked(object sender, EventArgs e)
@@ -44,5 +46,11 @@ public partial class TeacherLoginUI : ContentPage
             TeacherPasswordEntry.IsPassword=true;
             showPasswordImageBtn.Source = "showpassword.png";
         }
+    }
+
+    private void BackButton_Clicked(object sender, EventArgs e)
+    {
+        //temp set to add teacher page for testing
+        Navigation.PushAsync(new AddTeacherPage());
     }
 }

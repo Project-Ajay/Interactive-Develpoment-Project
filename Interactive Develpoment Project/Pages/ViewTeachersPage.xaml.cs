@@ -10,14 +10,18 @@ public partial class ViewTeachersPage : ContentPage
 
 	private TeacherRepository _teacherRepository;
 
-	public TeacherRepository TeacherRepository { get { return _teacherRepository; } }
-	public ViewTeachersPage(TeacherRepository teacherRepository)
+	public TeacherRepository TeacherRepository
+	{
+		get { return _teacherRepository; }
+	}
+
+	public ViewTeachersPage()
 	{
 		InitializeComponent();
 
-		_teacherRepository = teacherRepository;
+		_teacherRepository = TeacherRepository.Repository;
 
-		BindingContext = this;
+        BindingContext = this;
 	}
 
     private void BackBtn_Clicked(object sender, EventArgs e)
@@ -34,18 +38,18 @@ public partial class ViewTeachersPage : ContentPage
 
         }
 
-		bool choice = await DisplayAlert("Attention", $"Are you sre you would like to delete {_selectedTeacher.TeacherFirstName} from the database", "Yes", "No");
+		bool choice = await DisplayAlert("Attention", $"Are you sure you would like to delete {_selectedTeacher.TeacherFirstName} from the database", "Yes", "No");
 
 		if (choice)
 		{
 			_teacherRepository.DeleteTeacher(_selectedTeacher);
             await DisplayAlert("Success", $"Successfully Deleted {_selectedTeacher.TeacherFirstName} {_selectedTeacher.TeacherLastName} from the database", "Ok");
 
-            TeachersListView.SelectedItem = null;
-            TeachersListView.ItemsSource = null;
-            TeachersListView.ItemsSource = _teacherRepository.Teachers;
+			TeachersListView.ItemsSource = null;
+			TeachersListView.ItemsSource = _teacherRepository.Teachers;
             _selectedTeacher = null;
-		}
+            TeachersListView.SelectedItem = null;
+        }
 		else
 		{
             TeachersListView.SelectedItem = null;
