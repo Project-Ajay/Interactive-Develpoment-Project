@@ -9,10 +9,10 @@ public partial class LandingPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void AdminButton_Clicked(object sender, EventArgs e)
+    private void RegisterButton_Clicked(object sender, EventArgs e)
     {
-        AdminLoginUI adminLoginUI = new AdminLoginUI();
-        Navigation.PushAsync(adminLoginUI);
+        AdminUI adminUI = new AdminUI();
+        Navigation.PushAsync(adminUI);
         
     }
 

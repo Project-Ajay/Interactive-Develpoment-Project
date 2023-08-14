@@ -84,6 +84,6 @@ public partial class AddCoursePage : ContentPage
 
     void BackToAdmin(System.Object sender, System.EventArgs e)
     {
-        Navigation.PushAsync(new AdminUI());
+        Navigation.PopAsync();
     }
 }

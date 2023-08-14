@@ -16,9 +16,9 @@
 
         <Button
             ImageSource="admin.png" MaximumHeightRequest="90" MaximumWidthRequest="250"          
-            x:Name="AdminButton"
-            Clicked="AdminButton_Clicked"
-            Text="Administration"
+            x:Name="RegisterButton"
+            Clicked="RegisterButton_Clicked"
+            Text="Registration"
             Style="{StaticResource LandingPageButton}"/>
 
         <Button

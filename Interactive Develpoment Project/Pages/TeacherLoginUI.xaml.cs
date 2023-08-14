@@ -51,6 +51,6 @@ public partial class TeacherLoginUI : ContentPage
     private void BackButton_Clicked(object sender, EventArgs e)
     {
         //temp set to add teacher page for testing
-        Navigation.PushAsync(new AddTeacherPage());
+        Navigation.PopAsync();
     }
 }

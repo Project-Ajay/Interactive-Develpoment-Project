@@ -32,6 +32,6 @@ public partial class ViewAllStudentsPage : ContentPage
 
     void BackToAdmin(System.Object sender, System.EventArgs e)
     {
-		Navigation.PushAsync(new AdminUI());
+		Navigation.PopAsync();
     }
 }
